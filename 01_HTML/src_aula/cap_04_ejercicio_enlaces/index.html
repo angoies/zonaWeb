@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>index.html</title>
+</head>
+<body>
+<h1>index.html</h1>
+
+<!-- AQUÍ DEBE IR LA BARRA DE NAVEGACIÓN   -->
+
+<h2>Ejemplo de imagen con enlace</h2>
+
+<a href="http://uniwebsidad.com"> 
+	<img src="figuras/esquema.png" alt="ejemplo de estructura">
+</a>
+
+
+
+<nav>
+	<h2>Barra de navegación (con target y download)</h2>
+	<ul>
+		<li>Enlace a un <a href="Ejercicio_enlaces.md">fichero markdown</a></li>
+		<li> <a href="docs/apuntes.pdf" download>apuntes.pdf</a> </li>
+		<li>Enlace a la figura <a href="figuras/esquema.png">Esquema.png</a></li>
+		<li><a target="_blank" href="nivel2/nivel2.html">nivel2.html</a></li>
+		<li><a href="nivel2/nivel21/nivel21.html">nivel21.html</a></li>
+		<li><a href="nivel2/nivel21/nivel211/nivel211.html">nivel211.html</a></li>
+	</ul>
+</nav>
+
+
+<h2>Enunciado ejercicio</h2>
+
+<p>Recrear sitio web con la estructura que se muestra. Cada página tendrá una barra de "navegación" donde hay enlaces a cada uno de los restantes documentos html, pdf y png.
+</p>
+
+<p>Adicionalemente tendremos en la página index.html:</p>
+<ul>
+	<li>Enlace a la Universidad de Cádiz</li>
+	<li>enlace <em>relativo a la raíz </em> al fichero esquema.png</li>
+	<li>Enlace al servidor FTP ftp.rediris.es para descargarse el fichero debian-cd/current/amd64/iso-cd/debian-11.1.0-amd64-netinst.iso </li>
+</ul>
+
+	<pre>
+	clases@xdebian11:~/ejercicio$ tree -n
+	.
+	├── docs
+	│   └── apuntes.pdf
+	├── figuras
+	│   └── esquema.png
+	├── index.html
+	├── nivel1
+	│   ├── nivel11
+	│   │   └── nivel11.html
+	│   └── nivel1.html
+	└── nivel2
+		├── nivel21
+		│   ├── nivel211
+		│   │   └── nivel211.html
+		│   └── nivel21.html
+		└── nivel2.html
+
+	7 directories, 8 files
+	clases@xdebian11:~/ejercicio$ 	
+	</pre>
+
+	
+</body>
+</html>

@@ -1,0 +1,1829 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../src_aula/ejemplos_en_aula.zip">
+      
+      
+        <link rel="next" href="../CSS_amplia_21_sass/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>BootStrap - Zona Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bootstrap-introduccion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Web" class="md-header__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BootStrap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_HTML/HTML_intro/" class="md-tabs__link">
+          
+  
+  01. HTML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../CSS_00_Intro/" class="md-tabs__link">
+          
+  
+  02. CSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_JS/apuntes_JS-parte01/" class="md-tabs__link">
+          
+  
+  03. JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pdf/document.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Volcado PDF
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Web" class="md-nav__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/HTML_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_03/cap03_amplia_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_04/cap04-amplia-enlaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_05/cap_05-06_varios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_06/cap_06_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cap. 08
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cap. 08
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios_II/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/src/PHP-ciclo-server.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cómo funciona el servidor PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/formularios_ficheros.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros con ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_php_vscode_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/src_aula/src_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/errores/errores-frecuentes-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/amplia-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curiosidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    02. CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_00_Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_01_selectores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_03_colores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 03 Colores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_04_boxModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 04 Box Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_06_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 06 Texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.01 Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_RWD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.02 RWD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errores_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src_aula/ejemplos_en_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Amplia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Amplia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-primeros-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Primeros pasos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-usando-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Usando clases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Usando clases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sobre-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Sobre colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-propiedades-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Propiedades de texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Imágenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Botones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Iconos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Formularios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-bootstrap-grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Bootstrap Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-layout-rwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Layout RWD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enlaces-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Enlaces principales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_21_sass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_22_Linter_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte03_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-abreviados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Abreviado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/LinterJS2024-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/src.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    src
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf/document.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volcado PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-primeros-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Primeros pasos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-usando-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Usando clases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Usando clases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sobre-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Sobre colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-propiedades-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Propiedades de texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Imágenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Botones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iconos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Iconos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Formularios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-bootstrap-grid-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Bootstrap Grid System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-layout-rwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Layout RWD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enlaces-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Enlaces principales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bootstrap-introduccion">Bootstrap - Introducción<a class="headerlink" href="#bootstrap-introduccion" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
+<p>Lea esta introducción tomada de <em>Bootstrap Ya</em> (<a href="https://www.tutorialesprogramacionya.com/cssya/bootstrapya/detalleconcepto.php?punto=1&amp;codigo=116&amp;inicio=0">https://www.tutorialesprogramacionya.com/cssya/bootstrapya/detalleconcepto.php?punto=1&amp;codigo=116&amp;inicio=0</a>)</p>
+<blockquote>
+<p>Bootstrap es un framework (librerías de CSS) que nos facilita y estandariza el desarrollo de sitios web. A partir de la versión 3.x ha sido implementado pensando que se adapte tanto a las pantallas de equipos de escritorio como a móviles y tablets. Bootstrap ha sido desarrollada y es mantenida por la empresa Twitter y la ha liberado como un producto Open Source.</p>
+</blockquote>
+<h2 id="2-primeros-pasos">2. Primeros pasos<a class="headerlink" href="#2-primeros-pasos" title="Permanent link">&para;</a></h2>
+<p>Acceda a la página <em>Get started with Bootstrap</em> <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">https://getbootstrap.com/docs/5.2/getting-started/introduction/</a>.
+Usaremos la última versión estable disponible. Y evitaremos versiones <em>alpha</em> o <em>beta</em>.</p>
+<p>Para empezar bastará enlazar nuestra página HTML inicial con el fichero CDN que nos proponen añadiendo la etiqueta <code>&lt;link&gt;</code> en <code>&lt;head&gt;</code></p>
+<div class="highlight"><pre><span></span><code>  ...
+  <span class="p">&lt;</span><span class="nt">link</span> 
+     <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css&quot;</span> 
+     <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span>
+     <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span>
+     <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo Bootstrap<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Y en nuestra página web crear un contenedor con un <code>&lt;h1&gt;</code> y párrafos de relleno. Observe las clases utilizadas en el bloque <code>div</code> o en el elemento <code>h1</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container bg-light pt-3 mt-3&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-primary text-center&quot;</span><span class="p">&gt;</span>Ejemplo inicial BS5<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laudantium commodi eos, officiis sint sunt
+      perferendis impedit necessitatibus quasi nisi unde ullam, corrupti dolore et quos quidem dolores temporibus fugit.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Observe cómo simplemente incluyendo el fichero de estilos CSS de Bootstrap con link y usando clases en los elementos html:</p>
+<ul>
+<li>ha cambiado la tipografía del documento</li>
+<li>el contenedor tiene</li>
+<li>margen superior (<code>tp-3</code>)</li>
+<li>padding superior (<code>pt-3</code>)  </li>
+<li>color de fondo (<code>bg-light</code>)</li>
+<li>el <code>h1</code></li>
+<li>está centrado y</li>
+<li>tiene color <em>primario</em>.</li>
+</ul>
+<h2 id="3-usando-clases">3. Usando clases<a class="headerlink" href="#3-usando-clases" title="Permanent link">&para;</a></h2>
+<h3 id="31-sobre-colores">3.1. Sobre colores<a class="headerlink" href="#31-sobre-colores" title="Permanent link">&para;</a></h3>
+<p>Bootstrap maneja colores por contextos: <em>primary, secondary, success, info, warning, danger, light y dark.</em></p>
+<p><img alt="figuras/BS_colores.png" src="../figuras/BS_colores.png" /></p>
+<p>Y estos contextos o colores se usa entre otras en las clases:</p>
+<ol>
+<li><code>text-&lt;color&gt;</code></li>
+<li><code>bg-&lt;color&gt;</code>, <code>text-bg-&lt;color&gt;</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-primary&quot;</span><span class="p">&gt;</span>This text is important.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-success&quot;</span><span class="p">&gt;</span>This text indicates success.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-info&quot;</span><span class="p">&gt;</span>This text represents some information.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ejemplos y resumen rápido:</p>
+<ul>
+<li>Color del texto: <a href="https://www.w3schools.com/bootstrap5/bootstrap_colors.php">https://www.w3schools.com/bootstrap5/bootstrap_colors.php</a></li>
+<li>Color de fondo: <a href="https://www.w3schools.com/bootstrap5/bootstrap_colors_bg.php">https://www.w3schools.com/bootstrap5/bootstrap_colors_bg.php</a></li>
+</ul>
+<h3 id="32-propiedades-de-texto">3.2. Propiedades de texto<a class="headerlink" href="#32-propiedades-de-texto" title="Permanent link">&para;</a></h3>
+<p>Dispone de clases para alinear el texto:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-start&quot;</span><span class="p">&gt;</span>Start aligned text on all viewport sizes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>Center aligned text on all viewport sizes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-end&quot;</span><span class="p">&gt;</span>End aligned text on all viewport sizes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>O para modificar el <code>font-style</code>, <code>font-weight</code>, <code>font-size</code>, etc.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-uppercase&quot;</span><span class="p">&gt;</span>Uppercased text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fs-3&quot;</span><span class="p">&gt;</span>.fs-3 text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fw-bold&quot;</span><span class="p">&gt;</span>Bold text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fst-italic&quot;</span><span class="p">&gt;</span>Italic text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Más detalles en <a href="https://getbootstrap.com/docs/5.2/utilities/text/">https://getbootstrap.com/docs/5.2/utilities/text/</a></p>
+<h3 id="33-imagenes">3.3. Imágenes<a class="headerlink" href="#33-imagenes" title="Permanent link">&para;</a></h3>
+<p>Existen clases para redondear las esquinas de las imágenes, simular miniaturas (<em>tumbnail</em>) o redondear la imagen:</p>
+<ul>
+<li><code>rounded-circle</code></li>
+<li><code>rounded</code></li>
+<li><code>img-tumbnail</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The .rounded-circle class shapes the image to a circle:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>            
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cinqueterre.jpg&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;rounded-circle&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Cinque Terre&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;304&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;236&quot;</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The .img-thumbnail class creates a thumbnail of the image:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>            
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cinqueterre.jpg&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;img-thumbnail&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Cinque Terre&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;304&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;236&quot;</span><span class="p">&gt;</span> 
+</code></pre></div>
+<p>Ejemplos de uso en <a href="https://www.w3schools.com/bootstrap5/bootstrap_images.php">https://www.w3schools.com/bootstrap5/bootstrap_images.php</a></p>
+<h3 id="34-tablas">3.4. Tablas<a class="headerlink" href="#34-tablas" title="Permanent link">&para;</a></h3>
+<p>Permite poner bordes, alternar color de fondo en filas pares e impares, efecto <em>hover</em>, etc.</p>
+<div class="highlight"><pre><span></span><code>   <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;table table-striped table-hover table-bordered border-primary&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-bg-primary&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          ...
+</code></pre></div>
+<p>Ejemplos de uso en <a href="https://getbootstrap.com/docs/5.2/content/tables/#overview">https://getbootstrap.com/docs/5.2/content/tables/#overview</a></p>
+<h3 id="35-botones">3.5. Botones<a class="headerlink" href="#35-botones" title="Permanent link">&para;</a></h3>
+<p>Bootstrap proporciona diferentes estilos de botones:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-outline-danger&quot;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-success&quot;</span><span class="p">&gt;</span>Link Button<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary btn-lg&quot;</span><span class="p">&gt;</span>Large<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary btn-sm&quot;</span><span class="p">&gt;</span>Small<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Incluso puede presentar un enlace en forma de botón:</p>
+<div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Button Elements<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-success&quot;</span><span class="p">&gt;</span>Link Button<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ejemplos en <a href="https://www.w3schools.com/bootstrap5/bootstrap_buttons.php">https://www.w3schools.com/bootstrap5/bootstrap_buttons.php</a></p>
+<h3 id="36-iconos">3.6. Iconos<a class="headerlink" href="#36-iconos" title="Permanent link">&para;</a></h3>
+<p>Para incorporar los iconos que Bootstrap proporciona debe seguir las indicaciones de <a href="https://icons.getbootstrap.com/#install">https://icons.getbootstrap.com/#install</a>:</p>
+<ol>
+<li>
+<p>Usar un <strong>CDN</strong> con <code>&lt;link&gt;</code> al fichero CSS con las definiciones de los iconos</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> 
+  <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Usar <strong>Icon font</strong> eiInsertar el icono en el código HTML usando el elemento <code>&lt;i&gt;</code> sin contenido y aplicándole la clase del icono:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Ejemplo de icono antes de h2 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bi-alarm&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> Iconos<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Ejemplo de icono en botón --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bi-arrow-90deg-left&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> Button
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+</ol>
+<p>Más información en <a href="https://icons.getbootstrap.com/#icon-font">https://icons.getbootstrap.com/#icon-font</a>.</p>
+<h3 id="37-formularios">3.7. Formularios<a class="headerlink" href="#37-formularios" title="Permanent link">&para;</a></h3>
+<p>Tiene detalles y ejemplos de uso de BootStrap con formularios en este enlace: <a href="https://www.w3schools.com/bootstrap5/bootstrap_forms.php">https://www.w3schools.com/bootstrap5/bootstrap_forms.php</a></p>
+<p>Se le añaden las clases</p>
+<ul>
+<li><code>form-label</code> a las etiquetas.</li>
+<li><code>form-control</code> a los inputs.</li>
+</ul>
+<p>Y se pueden a su vez especifiar el tipo de input con <code>class="form-check-input"</code>, <code>class="form-select"</code>, etc.</p>
+<p>Además nos pueden interesar posibilidades como:</p>
+<ul>
+<li>Etiquetas <em>flotantes</em>: <a href="https://www.w3schools.com/bootstrap5/bootstrap_form_floating_labels.php">https://www.w3schools.com/bootstrap5/bootstrap_form_floating_labels.php</a></li>
+<li>Decorar la <strong>validación</strong> de los campos del formulario: <a href="https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php">https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php</a></li>
+</ul>
+<h2 id="4-layout">4. Layout<a class="headerlink" href="#4-layout" title="Permanent link">&para;</a></h2>
+<p>Tiene dos tutoriales a seguir para este apartado:</p>
+<ul>
+<li>Documentación oficial de BS5: <a href="https://getbootstrap.com/docs/5.2/layout/grid/">https://getbootstrap.com/docs/5.2/layout/grid/</a></li>
+<li>W3schools Grid: <a href="https://www.w3schools.com/bootstrap5/bootstrap_grid_system.php">https://www.w3schools.com/bootstrap5/bootstrap_grid_system.php</a></li>
+</ul>
+<h3 id="41-bootstrap-grid-system">4.1. Bootstrap Grid System<a class="headerlink" href="#41-bootstrap-grid-system" title="Permanent link">&para;</a></h3>
+<p>Si hace un layout no adaptativo basta con saber que debe organizar el contenido en filas (<code>class="row"</code>), y que cada fila tiene por defecto doce columnas. Para especificar que un elemento es una columna y el tamaño de esa columna se usa la notación <code>class="col-X"</code> (siendo X el tamaño sobre 12).  Si no se especifican los tamaños se reparte para ocupar toda la fila.</p>
+<p><img alt="figuras/BS_layout.png" src="../figuras/BS_layout.png" /></p>
+<p>Y el resultado será similar a</p>
+<p><img alt="figuras/BS_layout_navegador.png" src="../figuras/BS_layout_navegador.png" /></p>
+<p>En el fichero <code>layout-BS.html</code>  tiene otro ejemplo de layout.</p>
+<h3 id="42-layout-rwd">4.2. Layout RWD<a class="headerlink" href="#42-layout-rwd" title="Permanent link">&para;</a></h3>
+<p>BootStrap tiene definidos puntos de ruptura para hacer diseños adaptativos (RWD).</p>
+<p><img alt="figuras/BS_breaks.png" src="../figuras/BS_breaks.png" /></p>
+<p>Si usamos la clase col-X se entiende que ese es el layout para todos los anchos de pantalla empezando por el <em>extra-small.</em></p>
+<p>Haga una pequeña modificación sobre el ejemplo anterior: sustituir las clases <code>col-X</code> por <code>col-sm-X</code>. <strong>Ahora para pantallas de ancho mayor a 576px se mantiene el diseño previo pero para menores, al no estar definido el comportamiento, se pasa a un diseño apilado (diseño por defecto)</strong>. Vea en la siguiente captura la misma página con dos anchos de pantalla:</p>
+<p><img alt="figuras/BS_layout_navegador_RWD.png" src="../figuras/BS_layout_navegador_RWD.png" /></p>
+<p>Tiene un ejemplo de RWD con bootstrap en el fichero <code>layoutBS-RWD.html</code>. En ese ejemplo se usan dos puntos de ruptura y tres layouts distintos.</p>
+<h2 id="5-enlaces-principales">5. Enlaces principales<a class="headerlink" href="#5-enlaces-principales" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Get started with Bootstrap: <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a></li>
+<li>Bootstrap 5 Tutorial W3school: <a href="https://www.w3schools.com/bootstrap5/">https://www.w3schools.com/bootstrap5/</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../src_aula/ejemplos_en_aula.zip" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ejemplos aula">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Ejemplos aula
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../CSS_amplia_21_sass/" class="md-footer__link md-footer__link--next" aria-label="Next: SASS">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SASS
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

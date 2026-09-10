@@ -1,0 +1,2343 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../apuntes_JS-parte02/">
+      
+      
+        <link rel="next" href="../apuntes_JS-abreviados/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Intro 03 DOM - Zona Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-javascript-03-dom" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Web" class="md-header__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro 03 DOM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_HTML/HTML_intro/" class="md-tabs__link">
+          
+  
+  01. HTML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_CSS/CSS_00_Intro/" class="md-tabs__link">
+          
+  
+  02. CSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../apuntes_JS-parte01/" class="md-tabs__link">
+          
+  
+  03. JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pdf/document.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Volcado PDF
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Web" class="md-nav__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/HTML_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_03/cap03_amplia_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_04/cap04-amplia-enlaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_05/cap_05-06_varios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_06/cap_06_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cap. 08
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cap. 08
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios_II/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/src/PHP-ciclo-server.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cómo funciona el servidor PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/formularios_ficheros.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros con ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_php_vscode_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/src_aula/src_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/errores/errores-frecuentes-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/amplia-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curiosidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_00_Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_01_selectores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_03_colores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 03 Colores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_04_boxModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 04 Box Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_06_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 06 Texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_12_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.01 Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_12_RWD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.02 RWD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/errores_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/src_aula/ejemplos_en_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Amplia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Amplia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_20_BS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_21_sass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_22_Linter_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    03. JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-parte01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-parte02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción DOM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-accesos-directos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Accesos "directos"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-acceder-a-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Acceder a elementos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Acceder a elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-acceso-con-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Acceso con métodos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-acceso-al-contenido-o-estilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Acceso al contenido o estilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodos-con-selector-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Métodos con selector CSS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-acceder-a-los-atributos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Acceder a los atributos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Acceder a los atributos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Casos especiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Estilos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-trabajar-con-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Trabajar con elementos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Trabajar con elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-anadir-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Añadir un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-borrar-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Borrar un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mover-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Mover un elemento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Eventos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-tipos-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Tipos de eventos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-asociar-eventos-a-codigo-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Asociar eventos a código javascript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Asociar eventos a código javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-forma-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1. Forma 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-forma-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2. Forma 02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-forma-03-addeventlistener" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3. Forma 03: addEventListener
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-uso-eventos-y-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Ejemplo uso eventos y formularios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-eventos-y-la-palabra-reservada-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Eventos y la palabra reservada this
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-generar-un-elemento-html-con-hijos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. Generar un elemento HTML con hijos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-eventos-apis-y-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2. Eventos, APIs y JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-curiosidad-htmlcollection-vs-nodelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3. Curiosidad: HTMLCollection vs NodeList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-posibles-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Posibles ejercicios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-abreviados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Abreviado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinterJS2024-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    src
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf/document.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volcado PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción DOM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-accesos-directos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Accesos "directos"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-acceder-a-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Acceder a elementos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Acceder a elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-acceso-con-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Acceso con métodos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-acceso-al-contenido-o-estilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Acceso al contenido o estilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodos-con-selector-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Métodos con selector CSS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-acceder-a-los-atributos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Acceder a los atributos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Acceder a los atributos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Casos especiales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Estilos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-trabajar-con-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Trabajar con elementos HTML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Trabajar con elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-anadir-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Añadir un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-borrar-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Borrar un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mover-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Mover un elemento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Eventos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-tipos-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Tipos de eventos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-asociar-eventos-a-codigo-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Asociar eventos a código javascript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Asociar eventos a código javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-forma-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1. Forma 01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-forma-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2. Forma 02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-forma-03-addeventlistener" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3. Forma 03: addEventListener
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-uso-eventos-y-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Ejemplo uso eventos y formularios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-eventos-y-la-palabra-reservada-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Eventos y la palabra reservada this
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-generar-un-elemento-html-con-hijos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. Generar un elemento HTML con hijos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-eventos-apis-y-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2. Eventos, APIs y JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-curiosidad-htmlcollection-vs-nodelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3. Curiosidad: HTMLCollection vs NodeList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-posibles-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Posibles ejercicios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-javascript-03-dom">Introducción JavaScript 03 - DOM<a class="headerlink" href="#introduccion-javascript-03-dom" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduccion-dom">1. Introducción DOM<a class="headerlink" href="#1-introduccion-dom" title="Permanent link">&para;</a></h2>
+<p>Puede obtener una aproximación en este enlace <a href="https://www.w3schools.com/js/js_htmldom.asp">W3Schools: JavaScript HTML DOM</a></p>
+<blockquote>
+<p>El modelo DOM es una herramienta esencial para la manipulación y dinamización de páginas web. A través de JavaScript y la API del DOM, los desarrolladores pueden crear experiencias interactivas sin necesidad de recargar la página, optimizando la usabilidad y la experiencia del usuario.</p>
+<p>El Modelo de Objetos del Documento (DOM) es una interfaz de programación que representa la estructura de un documento HTML o XML como un árbol jerárquico de nodos. Cada elemento del documento, como etiquetas, atributos, texto y comentarios, se convierte en un nodo dentro de este árbol, permitiendo que los lenguajes de programación, como JavaScript, accedan y manipulen dinámicamente el contenido y la estructura del documento.</p>
+<p>Cuando un navegador carga una página web, analiza el código HTML y lo convierte en una estructura de nodos organizada en un árbol. Cada etiqueta HTML se representa como un nodo, que puede contener otros nodos como elementos hijos o atributos. JavaScript puede acceder y modificar estos nodos a través de métodos y propiedades del API del DOM.</p>
+</blockquote>
+<h2 id="2-accesos-directos">2. Accesos "directos"<a class="headerlink" href="#2-accesos-directos" title="Permanent link">&para;</a></h2>
+<p>DOM define algunas propiedades que nos permiten acceder directamente a información y elementos  de la página HTML. Entre ellos por ejemplo:</p>
+<ul>
+<li><code>document.URL</code>:  devuelve la URL del documento.</li>
+<li><code>document.title</code>: devuelve el valor del elemento <code>&lt;title&gt;</code>.</li>
+<li><code>document.links</code>: devuelve una colección con todos los elementos con atributo <code>href</code>.</li>
+<li><code>document.images</code>: devuelve una colección con todos los elementos <code>&lt;img&gt;</code> del documento.</li>
+<li><code>document.forms</code>: devuelve una colección con todos los elementos <code>&lt;form&gt;</code> del documento.</li>
+<li><code>document.lastModified</code>: devuelve la hora de modificación del documento.</li>
+</ul>
+<p>Tiene un ejemplo de su uso en el fichero <code>dom-001.html</code> y <code>dom-001.js</code>.</p>
+<h2 id="3-acceder-a-elementos-html">3. Acceder a elementos HTML<a class="headerlink" href="#3-acceder-a-elementos-html" title="Permanent link">&para;</a></h2>
+<h3 id="31-acceso-con-metodos">3.1. Acceso con métodos<a class="headerlink" href="#31-acceso-con-metodos" title="Permanent link">&para;</a></h3>
+<p>El primer paso para poder añadir elementos, modificarlos, etc. es identificar los elementos a procesar. Para ello se definen métodos para poder acceder a los elementos HTML que cumplan alguna condición: por id, por clase, por etiqueta, etc. Estos métodos devuelven un elemento o una colección de  de elementos (<em>HTMLCollection</em>, similar a un array).</p>
+<p>Alguno de estos métodos:</p>
+<ul>
+<li><strong><code>getElementById(id)</code></strong> =&gt; retorna <strong>un elemento</strong> con el id indicado</li>
+<li><strong><code>getElementsByTagName(tag)</code></strong> =&gt; retorna <strong>todos los elementos</strong> con esa etiqueta, una colección</li>
+<li><strong><code>getElementsByClassName(class)</code></strong> =&gt; retorna <strong>todos los elementos</strong> de esa clase, una colección.</li>
+</ul>
+<h3 id="32-acceso-al-contenido-o-estilo">3.2. Acceso al contenido o estilo<a class="headerlink" href="#32-acceso-al-contenido-o-estilo" title="Permanent link">&para;</a></h3>
+<p>Y una vez identificado  el elemento a procesar podemos acceder a su contenido o estilo con las propiedades:</p>
+<ul>
+<li><strong><code>.textContent</code></strong>: permite acceder al contenido de un elemento HTML (sin etiquetas interiores)</li>
+<li><strong><code>.innerHTML</code></strong>: permite acceder al contenido de un elemento HTML (incluidas las etiquetas interiores).</li>
+<li><strong><code>.style</code></strong>: permite acceder a los estilos CSS de un elemento HTML y modificarlos.</li>
+</ul>
+<p>Puede observar el uso de estos métodos y propiedades en los ficheros <code>dom-002.html</code> y <code>dom-002.js</code>. En el fichero HTML se añade un botón al que se le asocia la ejecución del código contenido en la función <code>test()</code>. El resultado se mostrará en consola.  </p>
+<p>En ese caso observe el uso de un método <code>.getElementsByTagName()</code> que devuelve una colección de elementos y el uso de <code>textContent</code> e <code>innerHTML</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ejemplo acceso por etiqueta, devuelve colección elementos</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">parrafos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+
+<span class="c1">// mostramos párrafos en consola </span>
+<span class="c1">// .innerHTML =&gt; ver como los párrafos llevan el HTML &quot;interno&quot;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">parrafos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parrafos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">parrafos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Y el uso de <code>.style</code> y <code>.getElementById()</code> (que devuelve un único valor):</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//  acceso por ID:  devuelve un único elemento</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">);</span>
+<span class="nx">contenido</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;4px blue double&quot;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="33-metodos-con-selector-css">3.3. Métodos con selector CSS<a class="headerlink" href="#33-metodos-con-selector-css" title="Permanent link">&para;</a></h3>
+<p>Hay métodos para identificar elementos HTML que usan como <strong>parámetro un selector CSS</strong> lo cual proporciona una gran flexibilidad si los sabe utilizar.</p>
+<ul>
+<li><strong><code>querySelector(selectorCSS)</code></strong> =&gt; retorna <strong>el primer elemento</strong> que cumpla el selector CSS.</li>
+<li><strong><code>querySelectorAll(selectorCSS)</code></strong> =&gt; retorna <strong>todos los elementos</strong> que cumplan el selector CSS.</li>
+</ul>
+<p>Vea ejemplos del uso de estos métodos en los ficheros <code>dom-003.html</code> y <code>dom-003.js</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">parrafos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;section p:nth-of-type(odd)&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">parrafos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">parrafos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;red&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="4-acceder-a-los-atributos-html">4. Acceder a los atributos HTML<a class="headerlink" href="#4-acceder-a-los-atributos-html" title="Permanent link">&para;</a></h2>
+<p>Los atributos de un elemento HTML son convertidos por el navegador en propiedades de un objeto. Para acceder a ellos puede usar los métodos:</p>
+<ul>
+<li><strong><code>.getAttribute(atributo)</code></strong>: devuelve como resultado el valor del <code>atributo</code></li>
+<li><strong><code>.setAttribute(atributo, nuevoValor)</code></strong>: permite asignarle el valor <code>nuevoValor</code> a <code>atributo</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span>
+<span class="nx">h1</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;título generado desde script&quot;</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">titulos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;[title]&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="w"> </span><span class="nx">titulos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">titulos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="41-casos-especiales">4.1. Casos especiales<a class="headerlink" href="#41-casos-especiales" title="Permanent link">&para;</a></h3>
+<p>Al <strong>acceder directamente a propiedades del DOM</strong> sin usar los métodos anteriores el valor retornado no siempre coincide con el valor del atributo HTML.</p>
+<p>Es el caso del atributo <strong><code>href</code></strong> de un enlace:</p>
+<ul>
+<li>Si accede a su valor con <code>.getAttribute(href)</code> se obtiene el valor del atributo HTML (puede ser un enlace relativo)</li>
+<li>Si accede con la propiedad DOM <code>.href</code> se obtiene siempre la URL absoluta de ese enlace.</li>
+</ul>
+<p>Vea la diferencia en este ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">enlaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;nav a&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">enlaces</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;con href: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">enlaces</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">href</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;con getAttribute: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">enlaces</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otro caso particular es el atributo <strong><code>class</code></strong>. Se puede acceder a su valor</p>
+<ul>
+<li>usando los métodos <code>.setAttribute()</code> y <code>.getAttribute()</code></li>
+<li>usando directamente la propiedad <code>.className</code>  (no se puede usar <code>.class</code> como nombre de la propiedad porque es una palabra reservada)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">ele</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">“</span><span class="nx">xxx</span><span class="err">”</span><span class="p">;</span>
+<span class="nx">ele</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="err">“</span><span class="w">  </span><span class="nx">xxx</span><span class="err">”</span><span class="p">;</span>
+</code></pre></div>
+<p>En los dos casos añadir una clase a un elemento HTML (o eliminarla  o comprobarla) no es inmediato ya que el atributo <code>class</code> puede contener varios valores (<code>class="revisar importante actual"</code>). En estas situaciones se usa <strong><code>.classList</code></strong> y sus métodos:</p>
+<ul>
+<li><code>.classList.add(clase)</code></li>
+<li><code>.classList.remove(clase)</code></li>
+<li><code>.classList.contains(clase)</code></li>
+</ul>
+<p>Ejemplo de su uso:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;section h2&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h2</span><span class="p">.</span><span class="nx">className</span><span class="p">);</span>
+<span class="nx">h2</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;nueva&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h2</span><span class="p">.</span><span class="nx">className</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h2</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s2">&quot;nueva&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>Tiene todos los ejemplos de uso de atributos en los ficheros <code>dom-004.html</code> y <code>dom-004.js</code>.</p>
+<h2 id="5-estilos">5. Estilos<a class="headerlink" href="#5-estilos" title="Permanent link">&para;</a></h2>
+<p>Ya se ha comentado que para acceder al valor de una propiedad CSS de un elemento HTML se usa la propiedad <code>style</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">propiedad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;valordelapropiedad&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">propiedad</span><span class="p">);</span>
+</code></pre></div>
+<p>Pero si el nombre de la propiedad CSS tiene un guión se transforma el nombre de la propiedad: se eliminan los guiones  y se capitaliza la propiedad usando la notación <strong>camelCase</strong>.  Por ejemplo:</p>
+<ul>
+<li><code>font-size</code> =&gt; <code>fontSize</code>.</li>
+<li><code>background-color</code> =&gt; <code>backgroundColor</code></li>
+<li><code>list-style-type</code> =&gt; <code>listStyleType</code></li>
+</ul>
+<p>Ejemplo de uso:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span>
+<span class="nx">h1</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">;</span>
+<span class="nx">h1</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">textDecoration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;underline red 4px double&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Otra forma "indirecta" de cambiar el estilo es usando clases HTML:</p>
+<ol>
+<li>Se define una regla CSS en la hoja de estilos asociada a una clase.</li>
+<li>Se modifica el atributo <code>class</code> del elemento para asignarle dicha clase.</li>
+</ol>
+<p>Ejemplo de uso:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// usando clases que tengan estilos asociados</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;section h2&quot;</span><span class="p">);</span>
+<span class="nx">h2</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;destacar&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Tiene el código de estos ejemplos en los ficheros <code>dom-005.html</code> y <code>dom-005.js</code>.</p>
+<h2 id="6-trabajar-con-elementos-html">6. Trabajar con elementos HTML<a class="headerlink" href="#6-trabajar-con-elementos-html" title="Permanent link">&para;</a></h2>
+<h3 id="61-anadir-un-elemento">6.1. Añadir un elemento<a class="headerlink" href="#61-anadir-un-elemento" title="Permanent link">&para;</a></h3>
+<p>Para añadir un nuevo elemento HTML podemos pensar en tres fases:</p>
+<ol>
+<li>
+<p>Primero hay que crearlo con <code>.createElement()</code> especificando el tipo del elemento</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nuevo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+</code></pre></div>
+</li>
+<li>
+<p>Posteriormente se le proporciona contenido (y estilos si hiciera falta)</p>
+<div class="highlight"><pre><span></span><code><span class="nx">nuevo</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;texto que se añade al elemento&quot;</span><span class="p">;</span>
+<span class="nx">nuevo</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Y por último falta decidir dónde insertarlo. Opciones:</p>
+</li>
+<li>
+<p>Antes o después de un cierto elemento (que llamaremos "intermedio" o referencia). Para ello usará <code>.after(nuevo)</code> o <code>.before(nuevo)</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">intermedio</span><span class="p">.</span><span class="nx">after</span><span class="p">(</span><span class="nx">nuevo</span><span class="p">);</span>
+<span class="nx">intermedio</span><span class="p">.</span><span class="nx">before</span><span class="p">(</span><span class="nx">nuevo</span><span class="p">);</span>
+</code></pre></div>
+</li>
+<li>
+<p>El primero o el último en un elemento contenedor (que llamaremos "padre"). En este caso usará <code>.append(nuevo)</code> (último) o <code>.prepend(nuevo)</code> (primero)</p>
+<div class="highlight"><pre><span></span><code><span class="nx">padre</span><span class="p">.</span><span class="nx">prepend</span><span class="p">(</span><span class="nx">nuevo</span><span class="p">);</span><span class="w"> </span><span class="c1">// añade nuevo como primer hijo</span>
+<span class="nx">padre</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">nuevo</span><span class="p">)</span><span class="w">  </span><span class="c1">// añade nuevo como último  hijo</span>
+</code></pre></div>
+</li>
+</ol>
+<h3 id="62-borrar-un-elemento">6.2. Borrar un elemento<a class="headerlink" href="#62-borrar-un-elemento" title="Permanent link">&para;</a></h3>
+<p>Para borrar un elemento basta obtener su referencia y aplicarle el método <code>.remove()</code> sin parámetros:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;nav h2&quot;</span><span class="p">);</span>
+<span class="nx">h2</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+</code></pre></div>
+<p>Tiene el código de estos ejemplos en los ficheros <code>dom-006.html</code> y <code>dom-006.js</code>.</p>
+<h3 id="63-mover-un-elemento">6.3. Mover un elemento<a class="headerlink" href="#63-mover-un-elemento" title="Permanent link">&para;</a></h3>
+<p>Mover es similar al tercer paso de crear un nuevo elemento: sólo necesita la referencia al elemento a mover y dónde quiere moverlo.</p>
+<h2 id="7-eventos">7. Eventos<a class="headerlink" href="#7-eventos" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Un evento es cualquier acción o suceso que ocurre en una página web y que puede ser detectado y manejado con código JavaScript. Los eventos pueden ser generados por el usuario (clics, teclas presionadas, movimientos del ratón), por el sistema (carga de la página, errores) o por interacciones automáticas.</p>
+</blockquote>
+<h3 id="71-tipos-de-eventos">7.1. Tipos de eventos<a class="headerlink" href="#71-tipos-de-eventos" title="Permanent link">&para;</a></h3>
+<p>Los eventos se pueden clasificar en varias categorías según su naturaleza:</p>
+<ul>
+<li>Eventos del mouse:</li>
+<li>click: Se activa cuando el usuario hace clic en un elemento.</li>
+<li>dblclick: Se dispara cuando se hace doble clic en un elemento.</li>
+<li>...</li>
+<li>Eventos del teclado:</li>
+<li>keydown: Se activa cuando el usuario presiona una tecla.</li>
+<li>keyup: Se dispara cuando el usuario suelta una tecla.</li>
+<li>Eventos de formulario:</li>
+<li>submit: Se activa cuando se envía un formulario.</li>
+<li>change: Se dispara cuando el valor de un campo de entrada cambia.</li>
+<li>focus: Se activa cuando un campo recibe el foco.</li>
+<li>...</li>
+<li>Eventos de la ventana y del documento:</li>
+<li>load: Se dispara cuando la página o un recurso se ha cargado completamente.</li>
+<li>resize: Se activa cuando se redimensiona la ventana del navegador.</li>
+<li>...</li>
+</ul>
+<p>Tiene una lista de posibles eventos en este enlace de <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools: HTML DOM Events</a>.</p>
+<h3 id="72-asociar-eventos-a-codigo-javascript">7.2. Asociar eventos a código javascript<a class="headerlink" href="#72-asociar-eventos-a-codigo-javascript" title="Permanent link">&para;</a></h3>
+<h4 id="721-forma-01">7.2.1. Forma 01<a class="headerlink" href="#721-forma-01" title="Permanent link">&para;</a></h4>
+<p>La forma más sencilla y directa (pero no por ello recomendable) de asociar código a un evento  es incluir en el elemento HTML el evento como atributo y el código a ejecutar como valor del atributo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">elemento</span> <span class="na">evento</span><span class="o">=</span><span class="s">&quot;códigoJavaScript&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Este podría ser un ejemplo inicial donde al hacer clic sobre el botón se sustituye el texto del párrafo con <code>id="demo"</code>  por la fecha actual:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;demo&quot;</span><span class="p">&gt;</span>¿Hora?<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span>  <span class="na">onclick</span><span class="o">=</span><span class="s">&#39;getElementById(&quot;demo&quot;).innerHTML=Date()&#39;</span><span class="p">&gt;</span>Ver hora 01<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Es recomendable crear una función  con el código javascript e  invocarla en el atributo del evento:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">verHora</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">demo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">demo</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nb">Date</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">demo</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Y el HTML queda</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;verHora();&quot;</span><span class="p">&gt;</span>Ver hora 02<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="722-forma-02">7.2.2. Forma 02<a class="headerlink" href="#722-forma-02" title="Permanent link">&para;</a></h4>
+<p>Otra forma de asociar eventos a código es identificar el botón (por ejemplo con un <code>id</code>) en el código HTML, y realizar en el código JavaScript la asociación evento-función. De esa forma en el código HTML no se indica el evento ni hay código JavaScript.</p>
+<p>El código HTML queda así:</p>
+<div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ver03&quot;</span><span class="p">&gt;</span>Ver hora 03<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Y en el código JavaScript se asocia al evento <code>onclick</code> la función <code>verHora</code> (observe que se asigna ls función sin paréntesis, no se está invocando):</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// asocia onclick a verHora</span>
+<span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;ver03&#39;</span><span class="p">)</span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="nx">verHora</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="723-forma-03-addeventlistener">7.2.3. Forma 03: <code>addEventListener</code><a class="headerlink" href="#723-forma-03-addeventlistener" title="Permanent link">&para;</a></h4>
+<p>Una última posibilidad es utilizar el método <code>.addEventListener()</code> que es la forma que tiene más posibilidades (aunque aquí se mostrará su uso básico).</p>
+<p>En esta forma primero se localiza el elemento HTML al que se le asocia el evento, y a la hora de asociar el evento usamos el método  <code>.addEventListener()</code> que recibe dos parámetros:</p>
+<ol>
+<li>El <strong>evento</strong> que se asocia ((observe que en el ejemplo el parámetro es <code>clic</code> y no <code>onclic</code>).</li>
+<li>La <strong>función</strong> que se asocia al evento.</li>
+</ol>
+<p>Lo puede observar en este ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;ver04&#39;</span><span class="p">);</span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">verHora</span><span class="p">);</span>
+</code></pre></div>
+<p>Observe que el evento no lleva el prefijo <strong><code>on</code></strong>. Tiene el código de estos ejemplos en los ficheros <code>dom-010.html</code> y <code>dom-010.js</code>.</p>
+<p>Y más información sobre este método en este enlace <a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">W3Schools: HTML DOM Element addEventListener()</a></p>
+<h3 id="73-ejemplo-uso-eventos-y-formularios">7.3. Ejemplo uso eventos y formularios<a class="headerlink" href="#73-ejemplo-uso-eventos-y-formularios" title="Permanent link">&para;</a></h3>
+<p>Para validar los campos de un formulario se puede usar el evento <code>onSubmit</code>.  Al asociar este evento a una función esta se ejecuta al pulsar el botón de envio del formulario. Si la función devuelve <code>false</code> el formulario no se envía.</p>
+<p>Vea un ejemplo de formulario de alta:</p>
+<ul>
+<li>el campo clave se solicita dos veces (inputs <code>pwd1</code> y <code>pwd2</code>)</li>
+<li>se añade el atributo <code>onsubmit</code> en el formulario que retorna el resultado de la función <code>checkForm()</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;form&quot;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&quot;return checkForm();&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;val.php&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Usuario: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;user&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;user&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Clave:   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pwd1&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pwd1&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Confirma:<span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pwd2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pwd2&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Enviar&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Y el código de la función de control <code>checkForm</code> que devuelve <code>false</code> si las claves son distintas.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">checkForm</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pwd1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;pwd1&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">pwd2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;pwd2&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">pwd1</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">pwd2</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Error: clave y confirmación deben ser iguales&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">//si onsubmit devuelve false no se envía formulario</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Observe que se accede al valor de los <code>inputs</code> del formulario <code>pwd1</code> y <code>pwd2</code> con la propiedad <code>value</code>.</p>
+</blockquote>
+<h3 id="74-eventos-y-la-palabra-reservada-this">7.4. Eventos y la palabra reservada <code>this</code><a class="headerlink" href="#74-eventos-y-la-palabra-reservada-this" title="Permanent link">&para;</a></h3>
+<p>Es frecuente que quiera asociar <strong>el mismo evento y función</strong> a un conjunto de elementos. Y que la función se aplique sobre el elemento que genera el evento en cada momento.</p>
+<p>En este caso la palabra reservada <strong><code>this</code></strong> permite acceder (desde la función asociada al evento) al elemento HTML que ha provocado el evento (y por tanto la ejecución de la función).</p>
+<p>Si por ejemplo quiere asociar la función a todos los párrafos de la página HTML debe recorrerlos con un bucle asignando a cada párrafo el evento y una función:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">parrafos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">parrafos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">parrafos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">colorVerde</span><span class="p">;</span><span class="w">  </span>
+<span class="w">  </span><span class="c1">// en cada parrafo se asocia evento onclick a función colorVerde</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Y vea  la función <code>colorVerde</code> que cambia el color del elemento que la invoque. Como no está determinado que elemento HTML la invocará se usa la palabra reservada <code>this</code> en la expresión  <code>this.style.color = "green";</code>:  </p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">colorVerde</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;green&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora cada vez que haga click sobre un párrafo cambiará el color de dicho párrafo.</p>
+<h2 id="8-anexos">8.  Anexos<a class="headerlink" href="#8-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="81-generar-un-elemento-html-con-hijos">8.1. Generar un elemento HTML con hijos<a class="headerlink" href="#81-generar-un-elemento-html-con-hijos" title="Permanent link">&para;</a></h3>
+<p>El objetivo es crear un elemento HTML que dentro tendrá a su vez elementos HTML hijos. Puede ser por ejemplo una lista y su elementos, o unta tabla con filas, etc.</p>
+<p>Tiene varias formas de abordar esta situación. Una de ellas sería:</p>
+<ol>
+<li>Primero se crea el elemento HTML <code>contenedor</code></li>
+<li>Luego se añade dentro de <code>contenedor</code> los hijos (podría ser un bucle)</li>
+<li>se crea el elemento HTML <code>hijo</code></li>
+<li>se le da contenido, estilo, etc.</li>
+<li>se inserta <code>hijo</code> en <code>contenedor</code></li>
+<li>Finalmente se inserta <code>contenedor</code> en la página HTML</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">creaLista01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2.1</span>
+<span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;item &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span><span class="w">       </span><span class="c1">// 2.2</span>
+<span class="w">    </span><span class="nx">lista</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span><span class="w">                   </span><span class="c1">// 2.3</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">destino</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultado&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">destino</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">lista</span><span class="p">);</span><span class="w">  </span><span class="c1">// 3</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otra forma de conseguir el mismo objetivo sería:</p>
+<ol>
+<li>Primero se crea el elemento HTML <code>contenedor</code></li>
+<li>Se genera una cadena o string con todo el contenido de <code>contenedor</code> (incluyendo las etiquetas HTML de los hijos)</li>
+<li>Se añade esa cadena al contenido del <code>contenedor</code> usando <code>innerHTML</code> ya que se incluyen en la cadena etiquetas HTML).  </li>
+<li>Finalmente se inserta <code>contenedor</code> en la página HTML.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">creaLista02</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">destino</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultado&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">lista</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;&lt;li&gt; item &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;/li&gt;&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="nx">lista</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="nx">destino</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">lista</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="82-eventos-apis-y-json">8.2. Eventos, APIs y JSON<a class="headerlink" href="#82-eventos-apis-y-json" title="Permanent link">&para;</a></h3>
+<p>Vea un ejemplo de consulta a una API desde JavaScript. En este caso se asocia al evento <code>onclick</code> la función <code>generaUsuario()</code>.</p>
+<p>Esta función hace la consulta a la API usando en la URL como parámetro el valor del input del formulario con <code>id="usuario"</code>.  Para ello se usa el método <code>.fetch</code>.</p>
+<p>La respuesta de la API se convierte a formato JSON y se utiliza para construir una cadena <code>cad</code>. Esa cadena contiene el código HTML de dos filas de un tabla, una con los encabezados y otra con la respuesta de la API. Esta cadena se inserta dentro de una tabla con id <code>tabla1</code> ya existente en la página HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">btn1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#busca&quot;</span><span class="p">);</span>
+<span class="nx">btn1</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">generaUsuario</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">generaUsuario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#usuario&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/users/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">usuario</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">cad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Teléfono&lt;/th&gt;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">cad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`&lt;tr&gt;&lt;td&gt;</span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                                &lt;td&gt;</span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">email</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                                &lt;td&gt;</span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">phone</span><span class="si">}</span><span class="sb">&lt;/td&gt;&lt;/tr&gt;`</span><span class="p">;</span>
+
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;tabla1&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo es similar, pero la consulta a la API devuelve una lista de usuarios. Por ello se usa un bucle que va generando tantas filas de la tabla como usuarios:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">btn2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#lista&quot;</span><span class="p">);</span>
+<span class="nx">btn2</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">generaTabla</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">generaTabla</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;genera Tabla&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/users/&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">cad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Teléfono&lt;/th&gt;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">usuario</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">cad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`&lt;tr&gt;&lt;td&gt;</span><span class="si">${</span><span class="nx">usuario</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                    &lt;td&gt;</span><span class="si">${</span><span class="nx">usuario</span><span class="p">.</span><span class="nx">email</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                    &lt;td&gt;</span><span class="si">${</span><span class="nx">usuario</span><span class="p">.</span><span class="nx">phone</span><span class="si">}</span><span class="sb">&lt;/td&gt;&lt;/tr&gt;`</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;tabla1&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Tiene el código en los  ficheros <code>index.html</code> y <code>app.js</code> de la carpeta <code>json_api</code>. Tiene más detalles del uso de esta API en este enlace: <a href="https://jsonplaceholder.typicode.com/">{JSON} Placeholder</a></p>
+<h3 id="83-curiosidad-htmlcollection-vs-nodelist">8.3. Curiosidad:  HTMLCollection vs NodeList<a class="headerlink" href="#83-curiosidad-htmlcollection-vs-nodelist" title="Permanent link">&para;</a></h3>
+<p>Los métodos <code>getElementsByTagName</code>, <code>getElementsByClassName</code> devuelven una colección HTML (<em>HTMLCollection</em>), pero el método  <code>querySelectorAll</code> devuelve una lista de nodos (<em>NodeList</em>). De ellos nos interesa que</p>
+<ul>
+<li>Los objetos <code>NodeList</code> son <strong>estáticos</strong>.</li>
+<li>Los objetos <code>HTMLCollection</code>  son <strong>dinámicos</strong> o vivos: se actualizan automáticamente si se modifica el documento.</li>
+</ul>
+<p>Hay que tener cuidado al insertar o borrar elementos de un <code>HTMLCollection</code> usando un bucle. Vea en la siguiente captura lo que ocurre al borrar un nodo de un lista: cómo se actualiza la colección HTML y cómo no lo hace la lista de nodos:</p>
+<p><img alt="nodeListvsHTMLColection.png" src="../figuras/nodeListvsHTMLColection.png" /></p>
+<p>Vea ejemplos de funciones que borran en bucle. En el primer caso se recorre siempre borrado el primero para no tener problemas:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">borraColeccion</span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w">  </span><span class="c1">// HTML Collection</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lista</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">lista</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">remove</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">borraLista</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// con NodeList</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">lista</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">lista</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">remove</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="9-posibles-ejercicios">9. Posibles ejercicios<a class="headerlink" href="#9-posibles-ejercicios" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Mostrar cuántas cabeceras de nivel 2 hay en el artículo. De ellas, cuántas tienen una longitud menor de 8, entre 8 y 50 y mayor de  50 caracteres.</li>
+<li>Estilos<ol>
+<li>Modificar el color del primer <code>&lt;li&gt;</code> de cada lista a rojo.</li>
+<li>Poner un borde inferior a todos las cabeceras <code>h2</code> y <code>h3</code> de la página.</li>
+</ol>
+</li>
+<li>Modificar la clase de los <code>h2</code> para que tengan la clase <code>indice.</code></li>
+<li>Modificar todos los elementos de la clase resumen y añadirle la clase <code>destacar</code>.</li>
+<li>Añadir elementos en una lista<ol>
+<li>Al principio de una lista.</li>
+<li>Al final de una lista.</li>
+<li>Antes de un elemento con <code>id=intermedio.</code></li>
+</ol>
+</li>
+<li>Si la página no tiene <code>footer</code> añadirlo con un <code>h2</code>.</li>
+<li>Borrar los elementos de la págiCódigo que al pulsar un botón añade al final de la página una lista con todas las palabras importantes (<code>strong</code>).</li>
+<li>Código que al pulsar un botón crea una lista con las abreviaturas existentes y su significado. Si se vuelve a pulsar el botón y la lista existe la borra.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../apuntes_JS-parte02/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro 02">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Intro 02
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../apuntes_JS-abreviados/" class="md-footer__link md-footer__link--next" aria-label="Next: JS Abreviado">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                JS Abreviado
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

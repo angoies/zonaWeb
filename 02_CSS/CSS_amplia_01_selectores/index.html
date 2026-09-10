@@ -1,0 +1,1849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../CSS_00_Intro/">
+      
+      
+        <link rel="next" href="../CSS_amplia_03_colores/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Cap 02 Selectores - Zona Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ampliacion-selectores-uniwebsidad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Web" class="md-header__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cap 02 Selectores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_HTML/HTML_intro/" class="md-tabs__link">
+          
+  
+  01. HTML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../CSS_00_Intro/" class="md-tabs__link">
+          
+  
+  02. CSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_JS/apuntes_JS-parte01/" class="md-tabs__link">
+          
+  
+  03. JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pdf/document.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Volcado PDF
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Web" class="md-nav__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/HTML_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_03/cap03_amplia_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_04/cap04-amplia-enlaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_05/cap_05-06_varios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_06/cap_06_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cap. 08
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cap. 08
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios_II/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/src/PHP-ciclo-server.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cómo funciona el servidor PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/formularios_ficheros.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros con ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_php_vscode_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/src_aula/src_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/errores/errores-frecuentes-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/amplia-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curiosidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    02. CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_00_Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-selectores-de-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Selectores de atributos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-selector-sibling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Selector sibling (~)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-selectores-estructurales-nth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Selectores estructurales :nth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Selectores estructurales :nth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nth-childanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. :nth-child(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nth-last-childanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. :nth-last-child(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-atajos-nth-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Atajos :nth-child
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Atajos :nth-child">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-first-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. :first-child
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-last-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. :last-child
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-nth-of-typeanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. :nth-of-type(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-nth-last-of-typeanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. :nth-last-of-type(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-atajos-nth-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Atajos nth-of-type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Atajos nth-of-type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-first-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. :first-of-type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-last-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.2. :last-of-type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-otras-posibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Otras posibilidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Otras posibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-a-partir-de-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.1. A partir de un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-hasta-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.2. Hasta un elemento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-especificidad-css-resolviendo-colisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Especificidad CSS: resolviendo colisiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_03_colores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 03 Colores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_04_boxModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 04 Box Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_06_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 06 Texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.01 Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_RWD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.02 RWD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errores_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src_aula/ejemplos_en_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Amplia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Amplia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_20_BS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_21_sass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_22_Linter_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte03_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-abreviados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Abreviado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/LinterJS2024-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/src.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    src
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf/document.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volcado PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-selectores-de-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Selectores de atributos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-selector-sibling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Selector sibling (~)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-selectores-estructurales-nth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Selectores estructurales :nth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Selectores estructurales :nth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-nth-childanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. :nth-child(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-nth-last-childanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. :nth-last-child(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-atajos-nth-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Atajos :nth-child
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Atajos :nth-child">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-first-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. :first-child
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-last-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. :last-child
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-nth-of-typeanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. :nth-of-type(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-nth-last-of-typeanb" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. :nth-last-of-type(an+b)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-atajos-nth-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Atajos nth-of-type
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Atajos nth-of-type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-first-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. :first-of-type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-last-of-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.2. :last-of-type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-otras-posibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Otras posibilidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Otras posibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-a-partir-de-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.1. A partir de un elemento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-hasta-un-elemento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.2. Hasta un elemento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-especificidad-css-resolviendo-colisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Especificidad CSS: resolviendo colisiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ampliacion-selectores-uniwebsidad">Ampliación Selectores Uniwebsidad<a class="headerlink" href="#ampliacion-selectores-uniwebsidad" title="Permanent link">&para;</a></h1>
+<p>Tiene una tabla resumen con ejemplos en W3schools: <a href="http://www.w3schools.com/cssref/css_selectors.asp">http://www.w3schools.com/cssref/css_selectors.asp</a></p>
+<h2 id="1-selectores-de-atributos">1. Selectores de atributos<a class="headerlink" href="#1-selectores-de-atributos" title="Permanent link">&para;</a></h2>
+<p>Además de los ya vistos en los apuntes de uniwebsidad tenemos:</p>
+<ul>
+<li><code>[attribute^=value]</code> Comienza por..
+    Por ejemplo, enlaces seguros: <code>a[href^=https://]</code></li>
+<li><code>[attribute$=value]</code> Termina por..
+    Por ejemplo, enlaces pdf: <code>a[href$=".pdf"]</code></li>
+<li><code>[attribute*=value]</code> Contiene a..
+    <code>img[alt*="logo"]</code></li>
+</ul>
+<h2 id="2-selector-sibling">2. Selector sibling (~)<a class="headerlink" href="#2-selector-sibling" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">element1</span><span class="o">~</span><span class="nt">element2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c">/*  General sibling combinator*/</span>
+</code></pre></div>
+<p>Este selector element1~element2 se aplica cuando el elemento2 está precedido por el elemento1. Ambos deben tener el mismo padre, pero el elemento2 no tiene porqué estar justo a continuación del elemento1.</p>
+<p>La diferencia con el selector adyacente es esa, puede haber elementos intermedios entre elemento1 y elemento2.</p>
+<h2 id="3-selectores-estructurales-nth">3. Selectores estructurales <code>:nth</code><a class="headerlink" href="#3-selectores-estructurales-nth" title="Permanent link">&para;</a></h2>
+<h3 id="31-nth-childanb">3.1. <code>:nth-child(an+b)</code><a class="headerlink" href="#31-nth-childanb" title="Permanent link">&para;</a></h3>
+<p>Selecciona los elementos (sin importar el tipo) que sean el hijo "n" de su padre. El valor de n puede ser un número, una palabra clave (odd o even) o una fórmula.</p>
+<p>En el siguiente ejemplo se hace referencia al tercer elemento de listas no numeradas:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Teniendo en cuenta que el índice del primer elemento es uno, la palabras reservadas odd (impar) y even (par) se pueden usar en vez de un valor numérico. El siguiente ejemplo selecciona las filas pares de una tabla:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="w"> </span><span class="o">(</span><span class="nt">even</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c">/* Selecciona filas pares*/</span><span class="w"> </span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">silver</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span><span class="w">  </span>
+</code></pre></div>
+<p>Con este selector tambien se puede usar la <em>fórmula</em> (an + b): a representa el tamaño del ciclo y b es el valor de desplazamiento inicial:</p>
+<div class="highlight"><pre><span></span><code><span class="c">/* Selecciona cada tres filas, el segundo… */</span>
+<span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3n</span><span class="o">+</span><span class="nt">2</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">silver</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="32-nth-last-childanb">3.2. <code>:nth-last-child(an+b)</code><a class="headerlink" href="#32-nth-last-childanb" title="Permanent link">&para;</a></h3>
+<p>Similar al anterior, pero se empieza a contar por el último elemento del contenedor</p>
+<h3 id="33-atajos-nth-child">3.3. Atajos <code>:nth-child</code><a class="headerlink" href="#33-atajos-nth-child" title="Permanent link">&para;</a></h3>
+<h4 id="331-first-child">3.3.1. <code>:first-child</code><a class="headerlink" href="#331-first-child" title="Permanent link">&para;</a></h4>
+<p>Equivalente a <code>:nth-child(1)</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">:</span><span class="nd">first-child</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="332-last-child">3.3.2. <code>:last-child</code><a class="headerlink" href="#332-last-child" title="Permanent link">&para;</a></h4>
+<p>Equivalente a <code>:nth-last-child(1)</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="34-nth-of-typeanb">3.4. <code>:nth-of-type(an+b)</code><a class="headerlink" href="#34-nth-of-typeanb" title="Permanent link">&para;</a></h3>
+<p>Numera los elementos hijos de un determinado tipo, y selecciona aquellos que cumplan estar en la posición "n". El valor de n puede ser un número, una palabra clave (odd o even) o una fórmula, de la misma forma que el selector nth-child().</p>
+<p>Su uso es recomendado si en el padre, el contenedor, hay elementos de distintos tipos. Por ejemplo, si queremos de color plata los párrafos pares de un artículo, y como es posible que dentro del artículo haya imágenes, citas, cabeceras, usamos nth-of-type() en vez de nth-child()</p>
+<div class="highlight"><pre><span></span><code><span class="nt">article</span><span class="w"> </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-of-type</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">silver</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Tiene ejemplos de la diferencia entre nth-child y nth-of-type en lso ejemplos de clase, y adicionalmente en el fichero css_selectores_nth_ejemplo.html de la carpeta de ejemplos de clase.</p>
+<h3 id="35-nth-last-of-typeanb">3.5. <code>:nth-last-of-type(an+b)</code><a class="headerlink" href="#35-nth-last-of-typeanb" title="Permanent link">&para;</a></h3>
+<p>Similar a :nth-of-type pero comienza a contar por el último</p>
+<h3 id="36-atajos-nth-of-type">3.6. Atajos <code>nth-of-type</code><a class="headerlink" href="#36-atajos-nth-of-type" title="Permanent link">&para;</a></h3>
+<h4 id="361-first-of-type">3.6.1. <code>:first-of-type</code><a class="headerlink" href="#361-first-of-type" title="Permanent link">&para;</a></h4>
+<p>Es equivalente a :nth-of-type(1), selecciona el primer elemento de ese tipo para cada padre.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">:</span><span class="nd">first-of-type</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="362-last-of-type">3.6.2. <code>:last-of-type</code><a class="headerlink" href="#362-last-of-type" title="Permanent link">&para;</a></h4>
+<p>Es equivalente a :nth-last-of-type(1).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">:</span><span class="nd">last-of-type</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="37-otras-posibilidades">3.7. Otras posibilidades<a class="headerlink" href="#37-otras-posibilidades" title="Permanent link">&para;</a></h3>
+<h4 id="371-a-partir-de-un-elemento">3.7.1. A partir de un elemento<a class="headerlink" href="#371-a-partir-de-un-elemento" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">n</span><span class="o">+</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="372-hasta-un-elemento">3.7.2. Hasta un elemento<a class="headerlink" href="#372-hasta-un-elemento" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">-n</span><span class="o">+</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="4-especificidad-css-resolviendo-colisiones">4. Especificidad CSS: resolviendo colisiones<a class="headerlink" href="#4-especificidad-css-resolviendo-colisiones" title="Permanent link">&para;</a></h2>
+<p>En los apuntes de uniwebsidad no se detalla <strong>cómo</strong> se determina que un selector es más específico que otro, y a veces nos podemos llevar sorpresas.</p>
+<p>Simplificando, será más específica:</p>
+<ul>
+<li>La regla con más selectores de ID.</li>
+<li>En caso de empate la que tenga más selectores de clase (o de atributo o pseudo-clases).</li>
+<li>Y en caso de empate la que tenga más selectores de tipo (y pseudo-elementos).</li>
+<li>Y si sigue el empate, la última.</li>
+</ul>
+<p>Por ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">.</span><span class="nc">resumen</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<p>es más específico que</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">section</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">article</span><span class="w">  </span><span class="nt">h2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Nota: Recuerde que Visual Code le muestra la especificidad de un selector al situar el ratón sobre el mismo.</p>
+</blockquote>
+<p>Aquí tiene algunos enlaces adicionales:</p>
+<ul>
+<li>Calculadora: <a href="https://specificity.keegan.st/">https://specificity.keegan.st/</a></li>
+<li>Una breve explicación en castellano: <a href="https://blog.outbook.es/desarrollo-web/css-especificidad-de-los-selectores">https://blog.outbook.es/desarrollo-web/css-especificidad-de-los-selectores</a></li>
+<li>Lo que dice la norma: <a href="https://www.w3.org/TR/selectors-3/#specificity">https://www.w3.org/TR/selectors-3/#specificity</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../CSS_00_Intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducción">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introducción
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../CSS_amplia_03_colores/" class="md-footer__link md-footer__link--next" aria-label="Next: Cap 03 Colores">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cap 03 Colores
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

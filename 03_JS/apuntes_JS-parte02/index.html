@@ -1,0 +1,2674 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../apuntes_JS-parte01/">
+      
+      
+        <link rel="next" href="../apuntes_JS-parte03_DOM/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Intro 02 - Zona Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-javascript-02" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Web" class="md-header__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro 02
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_HTML/HTML_intro/" class="md-tabs__link">
+          
+  
+  01. HTML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02_CSS/CSS_00_Intro/" class="md-tabs__link">
+          
+  
+  02. CSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../apuntes_JS-parte01/" class="md-tabs__link">
+          
+  
+  03. JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pdf/document.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Volcado PDF
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Web" class="md-nav__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/HTML_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_03/cap03_amplia_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_04/cap04-amplia-enlaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_05/cap_05-06_varios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_06/cap_06_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cap. 08
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cap. 08
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios_II/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/src/PHP-ciclo-server.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cómo funciona el servidor PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/formularios_ficheros.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros con ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_php_vscode_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/src_aula/src_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/errores/errores-frecuentes-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/amplia-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curiosidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_00_Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_01_selectores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_03_colores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 03 Colores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_04_boxModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 04 Box Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_06_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 06 Texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_12_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.01 Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_12_RWD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.02 RWD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/errores_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/src_aula/ejemplos_en_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Amplia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Amplia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_20_BS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_21_sass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS/CSS_amplia_22_Linter_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    03. JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-parte01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estructuras-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Estructuras de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-selectivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Selectivas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Selectivas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-selectiva-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1. Selectiva if-else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-selectiva-if-elseif" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2. Selectiva if-elseif
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-bucles-bucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Bucles: bucle for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arrays-y-bucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Arrays y bucles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metodos-predefinidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Métodos predefinidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Métodos predefinidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Cadenas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-ordenar-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Ordenar arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-buscar-en-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Buscar en arrays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-funcion-sin-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Función sin parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-funcion-con-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Función con parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-funcion-que-devuelve-retorna-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Función que devuelve (retorna) resultado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-recorrer-propiedades-de-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Recorrer propiedades de un objeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-arrays-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Arrays de objetos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-objetos-y-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Objetos y Métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-math-y-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Math y random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-selectiva-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Selectiva múltiple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-bucles-while-y-do-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Bucles while y do while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-variable-contador-acumulador-bandera" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Variable contador, acumulador, bandera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-estilos-de-llaves-y-tabulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Estilos de llaves y tabulación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-metodos-de-arrays-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6. Métodos de arrays avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6. Métodos de arrays avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1. forEach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662-every-y-some" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2. every y some
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663-map-y-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.3. map y filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-parte03_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuntes_JS-abreviados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Abreviado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinterJS2024-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    src
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf/document.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volcado PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-estructuras-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Estructuras de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-selectivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Selectivas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Selectivas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-selectiva-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1. Selectiva if-else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-selectiva-if-elseif" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2. Selectiva if-elseif
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-bucles-bucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Bucles: bucle for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arrays-y-bucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Arrays y bucles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metodos-predefinidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Métodos predefinidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Métodos predefinidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Cadenas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-ordenar-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Ordenar arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-buscar-en-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Buscar en arrays
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-funcion-sin-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Función sin parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-funcion-con-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Función con parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-funcion-que-devuelve-retorna-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Función que devuelve (retorna) resultado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-recorrer-propiedades-de-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Recorrer propiedades de un objeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-arrays-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Arrays de objetos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-objetos-y-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Objetos y Métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-math-y-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Math y random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-selectiva-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Selectiva múltiple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-bucles-while-y-do-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Bucles while y do while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-variable-contador-acumulador-bandera" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Variable contador, acumulador, bandera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-estilos-de-llaves-y-tabulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Estilos de llaves y tabulación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-metodos-de-arrays-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6. Métodos de arrays avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6. Métodos de arrays avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1. forEach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662-every-y-some" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2. every y some
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663-map-y-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.3. map y filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-javascript-02">Introducción JavaScript 02<a class="headerlink" href="#introduccion-javascript-02" title="Permanent link">&para;</a></h1>
+<h2 id="1-estructuras-de-control">1. Estructuras de control<a class="headerlink" href="#1-estructuras-de-control" title="Permanent link">&para;</a></h2>
+<p>Las imágenes de estructuras de control de este tema están tomadas de este tutorial: <a href="https://www.javascripttutorial.net/">JavaScript Tutorial</a></p>
+<h3 id="11-selectivas">1.1. Selectivas<a class="headerlink" href="#11-selectivas" title="Permanent link">&para;</a></h3>
+<p>Puede consultar estos enlaces:</p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_if_else.asp">JavaScript if, else, and else if</a></li>
+<li><a href="https://www.w3schools.com/js/js_switch.asp">JavaScript Switch Statement</a></li>
+</ul>
+<h4 id="111-selectiva-if-else">1.1.1. Selectiva if-else<a class="headerlink" href="#111-selectiva-if-else" title="Permanent link">&para;</a></h4>
+<p><img alt="javascript-if-else.svg" src="../figuras/javascript-if-else.svg" /></p>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Edad: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Menor de edad o no la indica&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Mayor de edad&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="112-selectiva-if-elseif">1.1.2. Selectiva if-elseif<a class="headerlink" href="#112-selectiva-if-elseif" title="Permanent link">&para;</a></h4>
+<p>Se usa <code>else if</code> para especificar una nueva condición si la condición inicial es falsa. Por ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">time</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Good morning&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">time</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Good day&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Good evening&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como se observa en esta figura se pueden "encadenar" varios <code>else if</code>:</p>
+<p><img alt="javascript-if-else-if.svg" src="../figuras/javascript-if-else-if.svg" /></p>
+<p>Ejemplo de varios <code>else if</code> encadenados:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Nota: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Suspendo&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Aprobado&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Notable&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Sobresaliente&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Nota fuera de rango&quot;</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
+<h3 id="12-bucles-bucle-for">1.2. Bucles: bucle for<a class="headerlink" href="#12-bucles-bucle-for" title="Permanent link">&para;</a></h3>
+<p>Vea el diagrama clásico de un bucle <code>for</code></p>
+<p><img alt="javascript-for-loop.svg" src="../figuras/javascript-for-loop.svg" /></p>
+<blockquote>
+<p>[Uniwebsidad]"mientras la condición indicada se siga cumpliendo, repite la ejecución de las instrucciones definidas dentro del for. Además, después de cada repetición, actualiza el valor de las variables que se utilizan en la condición".</p>
+<ul>
+<li>La "inicialización" es la zona en la que se establece los valores iniciales de las variables que controlan la repetición.</li>
+<li>La "condición" es el único elemento que decide si continua o se detiene la repetición.</li>
+<li>La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.</li>
+</ul>
+</blockquote>
+<p>En el código de ejemplo vea que el paréntesis tiene tres partes separadas: inicialización, condición y actualización:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;=</span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;=</span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">suma</span><span class="p">);</span>
+</code></pre></div>
+<p>Hay ejemplos completos en los ficheros <code>ejemplo016.html</code> y <code>ejemplo16.js</code>.</p>
+<h2 id="2-arrays">2. Arrays<a class="headerlink" href="#2-arrays" title="Permanent link">&para;</a></h2>
+<p>Un array almacena múltiples valores sobre un nombre único. Se puede acceder a un valor concreto usando el nombre del array y un índice (su posición en el array).</p>
+<p>Existen varias formas de definir un array y la más habitual es la notación "literal" usando corchetes y una lista de valores separados por comas. Es posible conocer el tamaño del array con la propiedad <code>length</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">marcas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Volvo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Seat&quot;</span><span class="w"> </span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">marcas</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+</code></pre></div>
+<p>Para acceder al valor de un elemento (o modificarlo) se usa su posición <strong>teniendo en cuenta que se indexa a partir del valor cero:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">marcas</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">marcas</span><span class="p">[</span><span class="mf">1</span><span class="p">])</span>
+
+<span class="nx">marcas</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Renault&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">marcas</span><span class="p">[</span><span class="mf">1</span><span class="p">])</span>
+</code></pre></div>
+<h3 id="21-arrays-y-bucles">2.1. Arrays y bucles<a class="headerlink" href="#21-arrays-y-bucles" title="Permanent link">&para;</a></h3>
+<p>Los bucles <code>for</code> son de gran utilidad al trabajar con arrays ya que se puede recorrer el array usando la variable de control del bucle como índice:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">temperaturas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">12.5</span><span class="p">,</span><span class="w"> </span><span class="mf">13.6</span><span class="p">,</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mf">19.2</span><span class="p">,</span><span class="w"> </span><span class="mf">23.4</span><span class="p">];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; - &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En el caso de que no sea necesario usar la variable de control en el cuerpo del bucle puede usar la "variante" <code>for of</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">temp</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">temp</span>
+<span class="p">}</span>
+
+<span class="nx">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">suma</span><span class="o">/</span><span class="nx">temperaturas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Media: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">media</span><span class="p">)</span>
+</code></pre></div>
+<p>El bucle <code>for of</code>es equivalente a este</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Hay ejemplos completos en los ficheros <code>ejemplo020.html</code> y <code>ejemplo020.js</code>.</p>
+<h2 id="3-metodos-predefinidos">3. Métodos predefinidos<a class="headerlink" href="#3-metodos-predefinidos" title="Permanent link">&para;</a></h2>
+<h3 id="31-cadenas">3.1. Cadenas<a class="headerlink" href="#31-cadenas" title="Permanent link">&para;</a></h3>
+<p>Puede consultar este enlace: <a href="https://www.w3schools.com/js/js_string_methods.asp">https://www.w3schools.com/js/js_string_methods.asp</a></p>
+<p>Un string o cadena de caracteres:</p>
+<ul>
+<li>dispone de la propiedad <code>length</code></li>
+<li>se puede acceder a cada carácter con la notación de corchetes.</li>
+<li>se puede recorrer con un bucle for.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Herrera&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">letra</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">apellido</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">letra</span><span class="p">)</span>
+</code></pre></div>
+<p>Además dispone de varios métodos predefinidos, entre ellos:</p>
+<ul>
+<li>Concatenar con <code>+</code>  o con el método <code>concat()</code>.</li>
+<li><code>toUpperCase()</code>, <code>toLowerCase()</code>, <code>trim()</code>: mayúsculas, minúsculas, eliminar espacios</li>
+<li><code>indexOf(character)</code>: devuelve la posición de <code>character</code> en el string</li>
+<li><code>slice(ini, fin)</code>:  extrae desde <code>ini</code> hasta <code>fin</code> y devuelve el resultado.</li>
+<li><code>replace(orig, dest)</code>: reemplaza la cadena <code>orig</code> con la cadena <code>dest</code> y devuelve el resultado.</li>
+<li><strong><code>split(separador)</code></strong>:  a partir de un string devuelve como resultado un array usando como delimitador la cadena <code>separador</code></li>
+</ul>
+<p>Vea un ejemplo de uso de <code>split()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">empresas</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;empresas: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">empresas</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;  empresas.length: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">empresas</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;lista: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lista</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;  lista.length: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">lista</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</code></pre></div>
+<p>Hay ejemplos completos en  los ficheros <code>ejemplo025.html</code> y <code>ejemplo025.js</code>.</p>
+<h3 id="32-numeros">3.2. Números<a class="headerlink" href="#32-numeros" title="Permanent link">&para;</a></h3>
+<p>Entre otras funciones puede usar estas:</p>
+<ul>
+<li><code>isNaN()</code>: devuelve verdadero si el valor pasado no es un numero (<em>Not A Number)</em></li>
+<li><code>toFixed(N)</code>: devuelve un string con <code>N</code> decimales.</li>
+<li><code>Number()</code>: convierte string a Number.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;num1: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;num2: &quot;</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">coc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="o">/</span><span class="nx">num2</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">coc</span><span class="p">)</span><span class="o">==</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División no definida&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Div es igual a: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">coc</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4564.34567</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 4564.35</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num1</span><span class="p">);</span>
+</code></pre></div>
+<p>Ejemplos completos en los ficheros <code>ejemplo026.html</code> y <code>ejemplo026.js</code>.</p>
+<h3 id="33-arrays">3.3. Arrays<a class="headerlink" href="#33-arrays" title="Permanent link">&para;</a></h3>
+<p>Puede consultar estos dos enlaces:</p>
+<ul>
+<li><a href="https://uniwebsidad.com/libros/javascript/capitulo-3/funciones-y-propiedades-basicas-de-javascript">Uniwebsidad: Funciones y propiedades básicas de JavaScript</a></li>
+<li><a href="https://www.w3schools.com/js/js_array_methods.asp">W3schools: JavaScript Array Methods</a></li>
+</ul>
+<p>Métodos principales a conocer:</p>
+<ul>
+<li><code>concat()</code>: concatena arrays</li>
+<li><code>join(separador)</code>: hace lo contrario a <code>split</code> con las cadenas, devuelve un string con los elementos del array separados por <code>separador</code>.</li>
+<li><code>pop()</code>: extrae un elemento al final del array y lo devuelve como resultado de la función.</li>
+<li><code>push()</code>: inserta uno o varios elementos al final del array.</li>
+<li><code>shift()</code> y <code>unshift()</code>: similares a a <code>push</code> y <code>pop</code> pero extraen e insertan al principio del array.</li>
+<li><code>reverse()</code>: modifica el array invirtiendo el orden de los elementos.</li>
+<li><code>toReversed()</code>: para invertir los elementos <strong>sin modificar el original</strong>.</li>
+<li><code>slice(ini, fin)</code>: Selecciona los elementos desde ini hasta fin (sin incluirlo) y devuelve ese array como resultado sin modificar el original.</li>
+<li><code>splice(ini, nborrar, ele1, ele2,..)</code>: permite insertar elementos nuevos (<code>ele1, ele2,...</code>) en la posición <code>ini</code>. También permite eliminar <code>nborrar</code> elementos desee la posición <code>ìni</code>.
+<a href="https://www.w3schools.com/js/js_array_methods.asp#mark_splice">https://www.w3schools.com/js/js_array_methods.asp#mark_splice</a></li>
+</ul>
+<p>Ejemplos completos en los ficheros <code>ejemplo030.html</code> y <code>ejemplo030.js</code>.</p>
+<h4 id="331-ordenar-arrays">3.3.1. Ordenar arrays<a class="headerlink" href="#331-ordenar-arrays" title="Permanent link">&para;</a></h4>
+<p>El método <code>sort()</code> ordena alfabéticamente (de forma ascendente). Si desea ordenar de forma descendente puede usar el método <code>reverse()</code> después de la ordenación.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// The sort() method sorts an array alphabetically: LO MODIFICA</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mango&quot;</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span>
+<span class="nx">fruits</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span>
+</code></pre></div>
+<p>Como <strong>la ordenación por defecto es alfanumérica</strong> si desea ordenar números necesita una función auxiliar que indique el criterio de ordenación:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ordenar números: hace falta función de comparación </span>
+<span class="c1">// si negativo a menor, si positivo b menor, si cero no intercambio</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">compara</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span><span class="w">  </span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">points</span><span class="p">);</span>
+<span class="nx">points</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">compara</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">points</span><span class="p">);</span>
+</code></pre></div>
+<p>Al igual que <code>reverse()</code> y <code>toReversed()</code> existe <code>toSorted()</code>. Con este último el original se mantiene y se devuelve una copia ordenada.</p>
+<p>Tiene ejemplos en los ficheros <code>ejemplo031.html</code> y <code>ejemplo031.js</code>.</p>
+<h4 id="332-buscar-en-arrays">3.3.2. Buscar en arrays<a class="headerlink" href="#332-buscar-en-arrays" title="Permanent link">&para;</a></h4>
+<p>Algunos métodos de búsqueda los puede encontrar en este enlace: <a href="https://www.w3schools.com/js/js_array_search.asp">W3schools: Array Find and Search Methods</a>. Los básicos son:</p>
+<ul>
+<li><code>indexOf(ele)</code>: busca <code>ele</code> en el array y devuelve la posición de su primera ocurrencia (o -1 si no lo encuentra).</li>
+<li><code>lastIndexOf()</code>: similar al anterior pero buscando desde el final.</li>
+<li><code>includes()</code>: comprueba si el elemento está incluido y devuelve <code>true</code> o <code>false</code>.</li>
+</ul>
+<p>Tiene ejemplos en  los ficheros <code>ejemplo032.html</code> y <code>ejemplo032.js</code>.</p>
+<h2 id="4-funciones">4. Funciones<a class="headerlink" href="#4-funciones" title="Permanent link">&para;</a></h2>
+<h3 id="41-funcion-sin-parametros">4.1. Función sin parámetros<a class="headerlink" href="#41-funcion-sin-parametros" title="Permanent link">&para;</a></h3>
+<p>En primer lugar se presenta una función sin parámetros y que no retorna nada. Vea como se define la función:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definición función </span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">linea</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">80</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>Y ahora como se utiliza, su llamada o invocación:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//  Invocación  función</span>
+<span class="nx">linea</span><span class="p">();</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hola Mundo! &lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="nx">linea</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="42-funcion-con-parametros">4.2. Función con parámetros<a class="headerlink" href="#42-funcion-con-parametros" title="Permanent link">&para;</a></h3>
+<p>Sería deseable en el ejemplo previo que se puedan generar líneas de distintas longitudes con esa función. Para ello la función debe recibir de alguna forma la longitud de la línea, y la forma de hacerlo es mediante un <strong>parámetro</strong> que se especifica en los paréntesis de la definición:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//  Invocación  función</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">linea01</span><span class="w"> </span><span class="p">(</span><span class="nx">tam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">tam</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>Observe cómo se añade el parámetro <strong><code>tam</code></strong> en los paréntesis, y cómo se usa como límite en el bucle <code>for</code> para indicar el número de repeticiones.</p>
+<p>Si la función recibe un parámetro hay que modificar la llamada o invocación e indicar qué valor tomará ese parámetro. Vea un ejemplo usando un número o uan variable:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">linea01</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span>
+<span class="nx">linea01</span><span class="p">(</span><span class="nx">longitud</span><span class="p">);</span>
+</code></pre></div>
+<p>Se podría mejorar la función con un segundo parámetro, el carácter que se usa para generar la linea:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// función con dos parámetros</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">linea02</span><span class="w"> </span><span class="p">(</span><span class="nx">tam</span><span class="p">,</span><span class="w"> </span><span class="nx">letra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">tam</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">letra</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>Y la llamada ahora se modifica para indicar ese segundo parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">linea02</span><span class="p">(</span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;=&quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Tamaño&quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">car</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;carácter: &quot;</span><span class="p">);</span>
+<span class="nx">linea02</span><span class="p">(</span><span class="nx">longitud</span><span class="p">,</span><span class="w"> </span><span class="nx">car</span><span class="p">);</span>
+</code></pre></div>
+<p>También es posible invocar la  función <code>linea02</code> desde otra función. En este ejemplo se invoca la función <code>linea02</code> en el bucle <code>for</code> de la función <code>piramide</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// función que usa otra función </span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">piramide</span><span class="p">(</span><span class="nx">altura</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">altura</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">linea02</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Altura: &quot;</span><span class="p">);</span>
+<span class="nx">piramide</span><span class="p">(</span><span class="nx">altura</span><span class="p">);</span>
+</code></pre></div>
+<p>Tiene los ejemplos en los ficheros <code>ejemplo040.html</code> y <code>ejemplo040.js</code>.</p>
+<h3 id="43-funcion-que-devuelve-retorna-resultado">4.3. Función que devuelve (retorna) resultado<a class="headerlink" href="#43-funcion-que-devuelve-retorna-resultado" title="Permanent link">&para;</a></h3>
+<p>Si una función realiza algún tipo de cálculo el valor calculado se devuelve como resultado de la función. Como ejemplo se propone una función que calcula la media de un array recibido como parámetro:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">lista</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">lista</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">lista</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">suma</span><span class="o">/</span><span class="nx">lista</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Observe que se calcula la media y ese valor calculado se indica en la sentencia <code>return</code> que cierra la función. Para usa el valor devuelto por la función es necesario asignar la invocación de la función a una variable (o usarla en una expresión).</p>
+<p>Vea como el resultado de la llamada  <code>media(edades_A)</code> se asigna a la variable <code>medA</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edades_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">23</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="mf">31</span><span class="p">];</span>
+<span class="c1">// se asigna el valor de retorno de la función a medA</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">medA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">edades_A</span><span class="p">);</span>
+</code></pre></div>
+<p>Un ejemplo del uso  de esta función con dos arrays distintos:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edades_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">23</span><span class="p">,</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="mf">31</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">medA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">edades_A</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">edades_B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">51</span><span class="p">,</span><span class="w"> </span><span class="mf">37</span><span class="p">,</span><span class="w"> </span><span class="mf">28</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">medB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">edades_B</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">medA</span><span class="o">&gt;</span><span class="nx">medB</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;A &gt; B&quot;</span><span class="p">);</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">medA</span><span class="o">&lt;</span><span class="nx">medB</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;A &lt; B&quot;</span><span class="p">);</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;A = B&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Tiene ejemplos en  los ficheros <code>ejemplo041.html</code> y <code>ejemplo041.js</code>.</p>
+<blockquote>
+<p>Para ver la importancia de devolver un valor como resultado de la función intente hacer este ejemplo previo sin devolver el valor.</p>
+</blockquote>
+<h2 id="5-objetos">5. Objetos<a class="headerlink" href="#5-objetos" title="Permanent link">&para;</a></h2>
+<p>Haremos una breve introducción al tema de los objetos en JavaScript. Tiene una referencia adicional en <a href="https://www.w3schools.com/js/js_objects.asp">W3Schools: JavaScript Objects</a></p>
+<p>Los objetos son variables que contienen <strong>propiedades</strong> y <strong>métodos</strong>. Los objetos se delimitan con llaves. Veamos un primer ejemplo de objeto con propiedades</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">alumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">apellidos</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Milton&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w">  </span><span class="mf">5566</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Las propiedades del objeto son pares <code>key:value</code> (nombre: valor), si hay varias separadas por comas. Se puede acceder a las propiedades del objeto de dos formas, notación de punto y de corchetes:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">alumno</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w">    </span><span class="c1">// 1) </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">alumno</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 2)</span>
+</code></pre></div>
+<h3 id="51-recorrer-propiedades-de-un-objeto">5.1. Recorrer propiedades de un objeto<a class="headerlink" href="#51-recorrer-propiedades-de-un-objeto" title="Permanent link">&para;</a></h3>
+<p>Para recorrer las propiedades de un objeto se puede usar una variante del bucle <code>for (prop in obj)</code>. Este bucle permite acceder al nombre de la propiedad y a su valor:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">propiedad</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">objeto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">propiedad</span><span class="p">,</span><span class="w"> </span><span class="nx">objeto</span><span class="p">[</span><span class="nx">propiedad</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">prop</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">alumno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">alumno</span><span class="p">[</span><span class="nx">prop</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto código genera en consola la salida:</p>
+<div class="highlight"><pre><span></span><code>nombre: Ana 
+apellidos: Milton
+id: 5566
+</code></pre></div>
+<h3 id="52-arrays-de-objetos">5.2. Arrays de objetos<a class="headerlink" href="#52-arrays-de-objetos" title="Permanent link">&para;</a></h3>
+<p>Puede definir un array donde cada elemento sea un objeto:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana Tendero&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">27</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Luis Fornes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bet Villa&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+</code></pre></div>
+<p>Al ser un array lo puede recorrer con un bucle for y acceder en cada iteración a las propiedades de cada objeto. Vea un ejemplo del cálculo de la media:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">alumnos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">alumnos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w">  </span><span class="nx">suma</span><span class="o">/</span><span class="nx">alumnos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;Media: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">media</span><span class="p">(</span><span class="nx">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<h3 id="53-objetos-y-metodos">5.3. Objetos y Métodos<a class="headerlink" href="#53-objetos-y-metodos" title="Permanent link">&para;</a></h3>
+<p>Además de propiedades, los objetos tiene métodos. Los métodos son acciones a  realizar sobre los objetos. Ya ha usado usado objetos y métodos previamente:</p>
+<ul>
+<li>
+<p>Al usar variables de tipo string y sus métodos predefinidos</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">“</span><span class="nx">Alfredo</span><span class="err">”</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">nombre</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">);</span><span class="w">       </span><span class="c1">// propiedad</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">nombre</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="err">“</span><span class="nx">l</span><span class="err">”</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// método</span>
+</code></pre></div>
+</li>
+<li>
+<p>O al usar métodos de arrays</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">temperaturas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="mf">37</span><span class="p">,</span><span class="w"> </span><span class="mf">31</span><span class="p">,</span><span class="w"> </span><span class="mf">28</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// propiedad</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">temperaturas</span><span class="p">.</span><span class="nx">sort</span><span class="p">()</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// método</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Vea un ejemplo cómo añadir un método a un objeto. Observe el uso de la palabra reservada <strong><code>this</code></strong> en la función:  se refiere al objeto dónde se está invocando ese método y permite acceder a las propiedades del mismo, <code>this.firstName y this.lastName</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// definición</span>
+<span class="w">    </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">lastName</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">id</span><span class="w">       </span><span class="o">:</span><span class="w"> </span><span class="mf">5566</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">fullName</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// uso de this</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w">           </span>
+<span class="w">              </span><span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Para invocar el método del objeto <code>person</code> se usa el nombre del método con los paréntesis (como en funciones):</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// invocación </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="w"> </span><span class="nx">person</span><span class="p">.</span><span class="nx">fullName</span><span class="p">()</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<p>Otro ejemplo: se define un objeto vacío al que se le van añadiendo propiedades (<code>id</code>, <code>modulos</code>, <code>notas</code>) y un método (<code>media</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">estudiante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"> </span><span class="c1">// se define objeto </span>
+<span class="nx">estudiante</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ASIR-1-001&quot;</span><span class="p">;</span>
+<span class="c1">// algunas propiedades son arrays</span>
+<span class="nx">estudiante</span><span class="p">.</span><span class="nx">modulos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;LMSGI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;PAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;FOL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ISO&quot;</span><span class="p">];</span>
+<span class="nx">estudiante</span><span class="p">.</span><span class="nx">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">];</span>
+<span class="c1">// se añade método</span>
+<span class="nx">estudiante</span><span class="p">.</span><span class="nx">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">suma</span><span class="o">/</span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// accedemos a las propiedades</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">modulos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">modulos</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">notas</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+
+<span class="c1">//invocación del método</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Media:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">media</span><span class="p">());</span>
+</code></pre></div>
+<p>Tiene estos ejemplos en los ficheros <code>ejemplo050.html</code> y <code>ejemplo050.js</code>.</p>
+<p>De todas formas no se pretende con esta introducción mostrar teoría de clases, objetos, herencia, etc.  En ECMAScript el soporte de clases está en plena evolución. Basta por ahora saber usar las propiedades y métodos que nos proporciona el lenguaje y su notación.</p>
+<h2 id="6-anexos">6. Anexos<a class="headerlink" href="#6-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="61-math-y-random">6.1. Math y random<a class="headerlink" href="#61-math-y-random" title="Permanent link">&para;</a></h3>
+<p>El objeto <code>Math</code> incluye varios métodos matemáticos. Ejemplo de uso de alguno de ellos:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">14</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.6</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">media</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">m</span><span class="p">);</span>
+<span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">media</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">m</span><span class="p">);</span>
+</code></pre></div>
+<p>Otro es <strong><code>Math.random()</code></strong> que devuelve un número aleatorio entre 0 y 1 (sin incluir el 1).</p>
+<p>Si desea un nº aleatorio entre 1 y 10 vea un primer ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// random devuelve entre 0 y 1 con decimales..</span>
+<span class="c1">//  y necesitaremos floor para redondear a nº entero,</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">aleat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">aleat</span><span class="p">)</span>
+</code></pre></div>
+<p>Si desea que el número aleatorio se genere entre un <code>min</code> y un <code>max</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* aleatorio entre variables min y max  */</span><span class="w"> </span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">aleat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span><span class="w"> </span>
+</code></pre></div>
+<p>Incluso se puede crear una función para encapsular dicho cálculo y que reciba como parámetros el máximo y el mínimo,  y que devuelva como resultado el número aleatorio:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* o creamos una función  */</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">getRndInteger</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">aleat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getRndInteger</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">100</span><span class="p">);</span>
+</code></pre></div>
+<p>Tiene estos ejemplos en los ficheros <code>ejemplo051.html</code> y <code>ejemplo051.js</code>.</p>
+<h3 id="62-selectiva-multiple">6.2. Selectiva múltiple<a class="headerlink" href="#62-selectiva-multiple" title="Permanent link">&para;</a></h3>
+<p><img alt="javascript-switch.svg" src="../figuras/javascript-switch.svg" /></p>
+<p>Puede consultar el uso de esta estructura en este enlace: <a href="https://www.javascripttutorial.net/javascript-switch-case/">https://www.javascripttutorial.net/javascript-switch-case/</a>.
+Se usa a veces como simplificación de una estructura <code>if-elseif</code></p>
+<p>Con <code>switch case</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span><span class="w"> </span>
+<span class="w">     </span><span class="p">...</span><span class="w"> </span>
+<span class="w">     </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">8</span><span class="o">:</span>
+<span class="w">     </span><span class="p">...</span><span class="w"> </span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mf">20</span><span class="o">:</span><span class="w"> </span>
+<span class="w">     </span><span class="p">...</span><span class="w"> </span>
+<span class="w">     </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"> </span>
+<span class="w">     </span><span class="p">...</span><span class="w"> </span>
+<span class="w">     </span><span class="k">break</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Y con <code>if else if</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="p">...</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="p">...</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="p">...</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="63-bucles-while-y-do-while">6.3. Bucles while y do while<a class="headerlink" href="#63-bucles-while-y-do-while" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>while</code>: <a href="https://www.javascripttutorial.net/javascript-while-loop/">https://www.javascripttutorial.net/javascript-while-loop/</a></li>
+<li><code>do while</code>: <a href="https://www.javascripttutorial.net/javascript-do-while/">https://www.javascripttutorial.net/javascript-do-while/</a></li>
+</ul>
+<p>La diferencia principal es cuándo se evalúa la condición: antes o después de la primera ejecución del bucle.</p>
+<div class="highlight"><pre><span></span><code><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// statements;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="p">(</span><span class="nx">expression</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// statements</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="64-variable-contador-acumulador-bandera">6.4. Variable contador, acumulador, bandera<a class="headerlink" href="#64-variable-contador-acumulador-bandera" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Contador: variable cuyo valor se incrementa o decrementa en una cantidad constante cada vez que se produce un determinado suceso o acción</li>
+<li>Acumulador: variable que suma sobre sí misma un conjunto de valores, para de esta manera tener la suma de todos ellos en una sola variable.</li>
+<li>Tenga en cuenta que debe iniciar contador y acumulador</li>
+<li>antes del bucle</li>
+<li>acumuladores a cero si suma, a uno si producto.</li>
+<li>banderas (flag, interruptor o conmutador): variable que puede tomar dos valores (verdadero o falso) a lo largo de la ejecución del programa y permite comunicar información de una parte a otra del mismo para bifurcar el código.</li>
+</ul>
+<p>Ejemplos:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// contador: ejemplo, variable que cuenta el número de aprobados</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">nAprobados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">notas</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">nAprobados</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// acumulador: ejemplo, variable que acumula la suma </span>
+<span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">notas</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="c1">// bandera o flag: ejemplo, detecta si hay algún suspenso</span>
+<span class="nx">haySuspensos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">notas</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="mf">0</span><span class="p">)</span>
+<span class="w">      </span><span class="nx">haySuspensos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="65-estilos-de-llaves-y-tabulacion">6.5. Estilos de llaves y tabulación<a class="headerlink" href="#65-estilos-de-llaves-y-tabulacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Conviene elegir un estilo, y usar siempre el mismo.</li>
+<li>Sobre el sangrado, hay dos corrientes:</li>
+<li>usar el carácter tabulador</li>
+<li>Usar espacios (2, 4...)</li>
+</ul>
+<p><img alt="estilos_llaves.png" src="../figuras/estilos_llaves.png" /></p>
+<h3 id="66-metodos-de-arrays-avanzados">6.6. Métodos de arrays avanzados<a class="headerlink" href="#66-metodos-de-arrays-avanzados" title="Permanent link">&para;</a></h3>
+<p>Vamos a presentar los métodos:</p>
+<ul>
+<li><code>forEach</code></li>
+<li><code>every</code> y <code>some</code></li>
+<li><code>map</code> y <code>filter</code></li>
+</ul>
+<p>Estos métodos reciben como parámetro una función llamada de retorno. Y esa función se aplicará a cada uno de los elementos del array. La función de retorno o comprobación puede tener hasta tres parámetros:</p>
+<ol>
+<li>El primero es el elemento: elemento del array procesado</li>
+<li>El segundo es el indice: índice del elemento procesado</li>
+<li>El tercero es el array: el array (completo) que se está procesando.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fRetorno</span><span class="p">(</span><span class="nx">elemento</span><span class="p">,</span><span class="w"> </span><span class="nx">indice</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w">  </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="661-foreach">6.6.1. forEach<a class="headerlink" href="#661-foreach" title="Permanent link">&para;</a></h4>
+<p>Vea como funciona <code>forEach</code> en los ejemplos de los ficheros <code>ejemplo060.html</code> y <code>ejemplo060.js</code>. En ellos se aprecia cómo se construye una función de retorno y como se invoca el método <code>forEach</code>.</p>
+<p>El método <code>forEach</code> va llamando a la función de retorno para cada elemento del array:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">];</span>
+
+<span class="c1">// uno, por ser el 1ª es el elemento</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">fcallback1</span><span class="p">(</span><span class="nx">ele</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;llamada a callback1: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">ele</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// LLAMADA A forEach, </span>
+<span class="c1">//  el nombre de la función es el parámetro</span>
+<span class="nx">numeros</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="w"> </span><span class="nx">fcallback1</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<p>Se puede usar el método para recorrer un array de objetos y mostrar sus propidades:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">alumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana Tendero&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">27</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Luis Fornes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bet Villa&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">muestraClase</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt; pos &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &gt; &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">     </span><span class="nx">val</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">val</span><span class="p">.</span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="kd">let</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">alumnos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">muestraClase</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="662-every-y-some">6.6.2. every y some<a class="headerlink" href="#662-every-y-some" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>every</code>: devuelve <code>true</code> si la función de comprobación que recibe <code>every</code> devuelve <code>true</code> <strong>para todos</strong> los valores del array.</li>
+<li><code>some</code>: devuelve <code>true</code> si la función de comprobación que recibe <code>some</code> devuelve <code>true</code> <strong>para alguno</strong> de los valores del array.</li>
+</ul>
+<p>Es importante destacar que la función de comprobación debe devolver <code>true</code> o <code>false</code> cuando procesa un elemento.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// función de comprobación</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">compruebaAdulto</span><span class="p">(</span><span class="nx">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span><span class="w"> </span><span class="c1">// DEVUELVE true o false</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">32</span><span class="p">,</span><span class="w"> </span><span class="mf">33</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt; Edades: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edades</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">todos_adultos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edades</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">compruebaAdulto</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;Todos adultos: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">todos_adultos</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">algun_adulto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edades</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">compruebaAdulto</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;Algún Adulto: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">algun_adulto</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="663-map-y-filter">6.6.3. map y filter<a class="headerlink" href="#663-map-y-filter" title="Permanent link">&para;</a></h4>
+<p>El método <code>map()</code> crea un nuevo array con los resultados de la llamada a la función de retorno aplicados a cada uno de sus elementos.</p>
+<p>En este primer ejemplo se usa la función <code>sqrt</code> de <code>Math</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">valores</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">];</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">raices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valores</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raices: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">raices</span><span class="p">)</span>
+</code></pre></div>
+<p>Y en este otro ejemplo se usa una función definida por el usuario. Observe que el parámetro de <code>map</code> es el nombre de la función (sin paréntesis)</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">duplica</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="o">*</span><span class="mf">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">dobles</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">valores</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">duplica</span><span class="p">);</span><span class="w">   </span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;dobles: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">dobles</span><span class="p">)</span>
+</code></pre></div>
+<p>El método <code>filter()</code> crea un nuevo array con los elementos que pasen el test de la función de retorno (dicha función debe devolver <code>true|false</code>)</p>
+<div class="highlight"><pre><span></span><code><span class="nx">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">32</span><span class="p">,</span><span class="w"> </span><span class="mf">33</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;edades: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edades</span><span class="p">);</span>
+
+<span class="c1">// función de retorno</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">esAdulto</span><span class="p">(</span><span class="nx">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">);</span><span class="w"> </span><span class="c1">// debe devolver true|false</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">adultos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edades</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">esAdulto</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;adultos: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">adultos</span><span class="p">)</span>
+
+<span class="c1">// función flecha, nueva sintaxis en ES6</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">menores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edades</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="o">&lt;</span><span class="mf">18</span><span class="w"> </span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;menores: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">menores</span><span class="p">)</span>
+</code></pre></div>
+<p>Tiene el código de los ejemplos en los ficheros <code>ejemplo060.html</code> y <code>ejemplo060.js</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../apuntes_JS-parte01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro 01">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Intro 01
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../apuntes_JS-parte03_DOM/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro 03 DOM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Intro 03 DOM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

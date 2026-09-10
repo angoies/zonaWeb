@@ -1,0 +1,1650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>CSS - Zona Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Web" class="md-header__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../01_HTML/HTML_intro/" class="md-tabs__link">
+          
+  
+  01. HTML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../CSS_00_Intro/" class="md-tabs__link">
+          
+  
+  02. CSS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03_JS/apuntes_JS-parte01/" class="md-tabs__link">
+          
+  
+  03. JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pdf/document.pdf" class="md-tabs__link">
+        
+  
+    
+  
+  Volcado PDF
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Web" class="md-nav__button md-logo" aria-label="Zona Web" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01. HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            01. HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/HTML_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_03/cap03_amplia_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_04/cap04-amplia-enlaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_05/cap_05-06_varios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_06/cap_06_index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap. 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cap. 08
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cap. 08
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_amplia_formularios_II/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formularios HTML II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/src/PHP-ciclo-server.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cómo funciona el servidor PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/formularios_ficheros.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros con ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/cap_08/cap_08_php_vscode_linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/src_aula/src_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/errores/errores-frecuentes-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_HTML/amplia-HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curiosidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02. CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            02. CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_00_Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_01_selectores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 02 Selectores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_03_colores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 03 Colores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_04_boxModel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 04 Box Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_06_texto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 06 Texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.01 Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_12_RWD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cap 12.02 RWD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errores_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errores frecuentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src_aula/ejemplos_en_aula.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos aula
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Amplia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Amplia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_20_BS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BootStrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_21_sass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS_amplia_22_Linter_CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03. JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03. JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-parte03_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro 03 DOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/apuntes_JS-abreviados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS Abreviado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/LinterJS2024-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_JS/src.zip" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    src
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdf/document.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volcado PDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ud01-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD01. Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UD01. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandares-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estándares: snapshot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formas-de-incluir-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formas de incluir estilos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud02-selectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD02. Selectores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud-02-colisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD 02. Colisiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud02-colores-y-medidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD02. Colores y medidas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UD02. Colores y medidas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medidas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud03-modelo-de-caja" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD03. Modelo de caja
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud03-posicionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD03. Posicionamiento
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud04-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      UD04: Propiedades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UD04: Propiedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cap-06-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cap 06. Texto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-07-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cap 07. Enlaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-08-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cap 08. Imágenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-10-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      cap 10. Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-09-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cap 09. Listas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-11-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      cap 11. Formularios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ud06-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ud06 Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Varios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
+<h2 id="ud01-introduccion">UD01. Introducción<a class="headerlink" href="#ud01-introduccion" title="Permanent link">&para;</a></h2>
+<h3 id="estandares-snapshot">Estándares: snapshot<a class="headerlink" href="#estandares-snapshot" title="Permanent link">&para;</a></h3>
+<h3 id="formas-de-incluir-estilos">Formas de incluir estilos<a class="headerlink" href="#formas-de-incluir-estilos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>elemento style (en head)</li>
+<li>**fichero enlazado con link**W</li>
+</ul>
+<h2 id="ud02-selectores">UD02. Selectores<a class="headerlink" href="#ud02-selectores" title="Permanent link">&para;</a></h2>
+<ul>
+<li>básicos</li>
+<li>universal <code>*</code></li>
+<li>de tipo o etiqueta <code>h1</code></li>
+<li>de clase <code>.revisar</code></li>
+<li>de id   <code>#resumen</code></li>
+<li>"avanzados"</li>
+<li>descendente (descendiente) <code>p a</code></li>
+<li>hijo (&gt;) <code>article p</code></li>
+<li>adyacente (+) <code>h1 + p</code></li>
+<li>sibling (~)  <code>h2 ~ p</code></li>
+<li>de atributos [atributo]</li>
+<li>existe <code>[title]</code></li>
+<li>es igual a <code>[title="ejemplo"]</code></li>
+<li>empieza por <code>[title^="ejemplo"]</code></li>
+<li>termina por <code>[title$="ejemplo."]</code></li>
+<li>contiene <code>[title*="ejemplo."]</code></li>
+<li>etc</li>
+<li>estructurales</li>
+<li>nth-child(an+b)</li>
+<li>nth-last-child(an+b)</li>
+<li>nth-of-type(an+b)</li>
+<li>nth-last-of-type(an+b)</li>
+<li>atajos:<ul>
+<li>first-child, last-child</li>
+<li>first-of-type, last-of-type</li>
+</ul>
+</li>
+<li>agrupación <code>p, dfn, a</code></li>
+</ul>
+<h2 id="ud-02-colisiones">UD 02. Colisiones<a class="headerlink" href="#ud-02-colisiones" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Herencia</li>
+<li>colisiones</li>
+<li>especificidad</li>
+</ul>
+<h2 id="ud02-colores-y-medidas">UD02. Colores y medidas<a class="headerlink" href="#ud02-colores-y-medidas" title="Permanent link">&para;</a></h2>
+<h3 id="colores">Colores<a class="headerlink" href="#colores" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Colores rgb</li>
+<li>colores HSL</li>
+<li>opacidad</li>
+</ul>
+<h3 id="medidas">Medidas<a class="headerlink" href="#medidas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>absolutas</li>
+<li>cm, mm, in</li>
+<li>pt</li>
+<li>relativas</li>
+<li>px</li>
+<li>em</li>
+<li>%</li>
+</ul>
+<h2 id="ud03-modelo-de-caja">UD03. Modelo de caja<a class="headerlink" href="#ud03-modelo-de-caja" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Margin, padding, border</li>
+<li>Color de fondo</li>
+<li>Imagen de fondo</li>
+<li>Altura y anchura</li>
+<li>Otros</li>
+<li>border-radius</li>
+<li>box-shadow</li>
+</ul>
+<h2 id="ud03-posicionamiento">UD03. Posicionamiento<a class="headerlink" href="#ud03-posicionamiento" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tipos</li>
+<li>estático</li>
+<li>relativo</li>
+<li>absoluto</li>
+<li>float<ul>
+<li>uso típico con imagenes</li>
+<li>uso layout</li>
+</ul>
+</li>
+<li>Visualización: </li>
+<li>display </li>
+<li>visibility</li>
+</ul>
+<h2 id="ud04-propiedades">UD04: Propiedades<a class="headerlink" href="#ud04-propiedades" title="Permanent link">&para;</a></h2>
+<h3 id="cap-06-texto">Cap 06. Texto<a class="headerlink" href="#cap-06-texto" title="Permanent link">&para;</a></h3>
+<ul>
+<li>font-weigh y font-style</li>
+<li>font-variant y text-transform</li>
+<li>line-height, word-spacing, letter-spacing</li>
+<li>white-space</li>
+<li>fuentes</li>
+<li>font-family y font </li>
+<li>fuente web<ul>
+<li>local</li>
+<li>Google</li>
+</ul>
+</li>
+<li>pseudoelementos</li>
+<li>::first-line y ::first-letter</li>
+<li>::after y ::before</li>
+<li>content y attr()</li>
+<li>impresión: hoja de estilos</li>
+<li>contadores CSS</li>
+</ul>
+<h3 id="cap-07-enlaces">Cap 07. Enlaces<a class="headerlink" href="#cap-07-enlaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>propiedades de texto: color ,tamano, decoration</li>
+<li>propiedades de box-model y convertir en botón.</li>
+<li>pseudoclases. :link, :visited, :hover y :active</li>
+<li>icono según enlace: box-model y selector atributos</li>
+</ul>
+<h3 id="cap-08-imagenes">Cap 08. Imágenes<a class="headerlink" href="#cap-08-imagenes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>border (y resto box-model)</li>
+<li>sombra: box-shadow</li>
+</ul>
+<h3 id="cap-10-tablas">cap 10. Tablas<a class="headerlink" href="#cap-10-tablas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>border</li>
+<li>border-collapse y border-spacing</li>
+<li>empty-cells</li>
+<li>caption-side</li>
+<li>usar selectores :nth</li>
+</ul>
+<h3 id="cap-09-listas">Cap 09. Listas<a class="headerlink" href="#cap-09-listas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>list-style</li>
+<li>list-style-type</li>
+<li>list-style-position</li>
+<li>list-style-image</li>
+<li>botoneras menú</li>
+<li>vertical</li>
+<li>horizontal: grid/float/flex</li>
+</ul>
+<h3 id="cap-11-formularios">cap 11. Formularios<a class="headerlink" href="#cap-11-formularios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>jugar con padding</li>
+<li>alinear label con input</li>
+<li>con float</li>
+<li>con grid</li>
+<li>columnas usando fieldset</li>
+<li><code>::focus</code></li>
+</ul>
+<h2 id="ud06-layout">Ud06 Layout<a class="headerlink" href="#ud06-layout" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cap 12</li>
+<li>grid (<del>float</del>)</li>
+<li><strong><strong>RWD</strong></strong><ul>
+<li>media query</li>
+<li>diseño first mobile</li>
+</ul>
+</li>
+</ul>
+<h2 id="varios">Varios<a class="headerlink" href="#varios" title="Permanent link">&para;</a></h2>
+<ul>
+<li>linter</li>
+<li>...</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

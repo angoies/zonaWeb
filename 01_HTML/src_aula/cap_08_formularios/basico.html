@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo formulario básico</title>
+</head>
+
+<body>
+
+    <h1>Cap 08: Formularios</h1>
+
+    <form action="procesa.php" method="get"> <!-- get/post -->
+
+        <p>
+            <label for="usuario">Usuario/login</label> <br>
+            <input type="text" name="login" id="usuario" required minlength="2" maxlength="4" size="42">
+        </p>
+        <p> <!-- Otra forma de enlazar label con input -->
+            <label>Clave <br>
+                <input type="password" name="clave">
+            </label>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+
+    </form>
+
+</body>
+
+</html>

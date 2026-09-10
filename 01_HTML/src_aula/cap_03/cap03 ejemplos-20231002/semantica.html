@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5: Nuevas etiquetas semánticas </title>
+	<style>
+		header,
+		nav,
+		footer,
+		section,
+		article,
+		aside,
+		main {
+			border: 2px dotted red;
+			margin: .5em;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h2>Explicación (h2 dentro de main)</h2>
+		<p>En esta página se usan y explican algunas de los elementos introducidos en HTML para dar semántica adicional
+			a la estructura de una página web. Entre ellos tenemos</p>
+		<ul>
+			<li>header</li>
+			<li>nav</li>
+			<li>aside</li>
+			<li>footer</li>
+			<li>section</li>
+			<li>article</li>
+			<li>main</li>
+		</ul>
+		<p>Veremos alguno otro más adelante como:</p>
+		<ul>
+			<li>figure y figcaption </li>
+			<li>details y summary</li>
+		</ul>
+		<p>En este apartado usamos main por considerarlo el contenido "principal"  o dominante de la página. Según el <cite>estándar del WHATWG</cite>:</p>
+		<blockquote>The main element represents the dominant contents of the document.A document must not have more than one main element that does not have the hidden attribute specified.</blockquote>
+	</main>
+
+
+	<header>
+		<h1>Etiqueta header (esto es un h1 en header)</h1>
+		<p> La etiqueta <code>header</code> se usa para marcar un grupo de elementos de introducción dentro de un
+			documento HTML, pero también puede aparecer en una section, article, footer, nav, aside.</p>
+		<p>Su uso más frecuente es sustituir al habitual <code>&lt;div id="header"></code>, donde se muestra el título
+			de la página, una introducción, el logo de la empresa,.. </p>
+	</header>
+
+	<nav>
+		<h2>Etiqueta <code>nav</code></h2>
+		<p>La etiqueta <code>nav</code> se usa para marcar una sección del documento cuya función es la navegación por
+			la página o el sitio web. </p>
+		<p>No es obligatorioa que sea una lista de enlaces (aunque es lo más frecuente), ni toda lista de enlaces tiene
+			porqué ser un elemento nav. </p>
+		<p>Incluso es posible incluir varios elementos nav en la página, por ejmplo uno para navegaciñondentro de la
+			propia página y otro para navegar dentro del sitio web.</p>
+		<ul>
+			<li><a href="">Productos</a></li>
+			<li><a href="">Soporte</a></li>
+			<li><a href="">Documetnación.</a></li>
+		</ul>
+		<p>Este bloque podrá aparecer en un lateral, como una barra superior, etc.</p>
+	</nav>
+
+	<section>
+		<h2>Sección 01: Etiqueta <code>section</code>
+		</h2>
+		<h3>Apartado 1.01</h3>
+		<p> Englobando distintos elementos dentro de una etiqueta <code>section</code> lo que estamos haciendo es
+			declarar que todo su contenido está relacionado y forma parte de un mismo significado o elemento. </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, non, sit, dignissimos qui porro quam
+			accusamus voluptatem perferendis culpa officia tenetur aliquid iste voluptatibus hic ad tempore odit
+			praesentium aperiam dolorem alias et voluptate deserunt molestias. Dolores, minima quam animi hic cum sequi
+			rerum a aliquid qui laboriosam. </p>
+	</section>
+	<section>
+		<h2>Sección 02: equipos de sobremesa</h2>
+		<p>Una sección puede contener otras secciones, o artículos.</p>
+		<article>
+			<header>
+				<h3>Etiqueta <code>article</code>: ejemplo uso artículo dentro sección</h3>
+				<p>Nota: lo normal es que si hay una cabecera que sólo contiene una cabecera de nivel no se usa la
+					etiqueta header, no se considera necesario..</p>
+			</header>
+			<p> El elemento article se usa para marcar contenido <strong>independiente</strong>, auto contenido, que
+				tendría sentido incluso fuera del contexto de la página actual <em>y que podría sindicarse o
+					distribuirse de forma independiente</em>, por ejemplo: una noticia, un artículo en un blog, un
+				comentario en un foro. </p>
+			<section>
+				<h2>Sección 1 dentro artículo</h2>
+				<p>Un artículo puede contener secciones que agrupan el contenido del artículo. En cambio un artículo no
+					suelte tener artículos ddntro (aunque la norma lo permite..).</p>
+
+			</section>
+			<section>
+				<h2>Sección 2 dentro artículo</h2>
+			</section>
+		</article>
+	</section>
+	<section>
+		<h2>Section 03: complementos y consumibles</h2>
+		<img src="estructura-semantica-html-5.png" alt="HTML%-estrcutura" width="600" height="432" border="0" />
+	</section>
+
+	<aside>
+		<h2>Etiqueta aside</h2>
+		<p>Contenidos relacionados con la temática de la web, pero que se pueden eliminar y la página (o la seccción o
+			el artículo) no se resiente. También se usa para la publicidad, </p>
+	</aside>
+
+	<footer>
+		<h2> Etiqueta footer: Pie de página</h2>
+		<p> Nueva etiqueta <code>footer</code>, usada para sustituir al típico <code>&lt;div id="footer"</code>. También
+			se puede usar dentro de section, article, etc. </p>
+		<p>Suele contener información de contacto, información sobre derechos dde autor, condiciones de uso o ayudas,
+			etc.</p>
+		<h3> Legal</h3>
+		<ul>
+			<li><a href="aviso-legal.html">Aviso legal</a></li>
+			<li><a href="privacidad.html">Provacidad</a></li>
+			<li><a href="contactar.html">Contactar</a></li>
+		</ul>
+		<h3>+info</h3>
+		<ul>
+			<li><a href="http://www.arumeinformatica.es/blog/html5-nuevas-etiquetas-semanticas-y-estructurales/">HTML5:
+					NUEVAS ETIQUETAS SEMÁNTICAS Y ESTRUCTURALES</a></li>
+			<li><a href="http://www.anerbarrena.com/nuevas-etiquetas-semanticas-estructura-html5-4853/">Las nuevas
+					etiquetas semánticas de estructura HTML5</a></li>
+			<li><a href="http://diveintohtml5.info/semantics.html#new-elements">NEW SEMANTIC ELEMENTS IN HTML5</a></li>
+		</ul>
+	</footer>
+
+	<section>
+		<h2>Nota: sobre el outline o esquema</h2>
+		<p> Instalar y usar extensión HeadingsMap en Chrome o Firefox. Puede ser necesario activar en la configuración de dicha
+			extensión el "Permitir acceso desde URL desde archivo". </p>
+		<p> Comprobar el funcionamiento dle plugin HeadingsMap en el enlace <a href="outline.html">outline.html que sólo utiliza
+				cabeceras de nivel para organizar la estructura</a>
+		<p>
+		<p> Realizar la misma operación con esta página, y vea como difieren los resultados de las pestañas Headers Structure y HTML5 Outline. </p>
+	</section>
+
+</body>
+
+</html>

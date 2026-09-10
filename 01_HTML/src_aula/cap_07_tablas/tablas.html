@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap 06 Tablas</title>
+    <style> 
+        th[scope="row"] {
+            background-color: green;
+        }
+        th {
+            background-color: yellow;
+        }
+        [colspan], 
+        [rowspan] 
+          { background-color: silver;}
+
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos iniciales de tablas HTML</h1>
+
+    <h2>Tabla inicial</h2>
+
+    <table border="1">
+      <!--   tr*5>td*4>lorem1 -->
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Dolorum, non?</td>
+            <td>Corrupti, debitis?</td>
+            <td>Assumenda, cumque!</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Ullam?</td>
+            <td>Aspernatur.</td>
+            <td>Amet?</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Velit?</td>
+            <td>Soluta!</td>
+            <td>Vitae!</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Laborum?</td>
+            <td>Quis!</td>
+            <td>Ea.</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Suscipit.</td>
+            <td>Labore?</td>
+            <td>Mollitia.</td>
+        </tr>
+    </table>
+
+    <h2>Tabla con cabeceras y caption</h2>
+
+    <table border="1">
+        <caption>Módulos de 1º</caption>
+        <tr>
+            <th scope="col">Curso</th>
+            <th scope="col">Nº Horas</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Profesor</th>
+        </tr>
+        <tr>
+            <th scope="row">Gestión Económica</th>
+            <td>3</td>
+            <td>L: 21:00-22:00 y M: 15:45-16:45</td>
+            <td>Luis García</td>
+        </tr>
+        <tr>
+            <th scope="row">Contabilidad</th>
+            <td>5</td>
+            <td>Consultar</td>
+            <td>Virginia Ariza</td>
+        </tr>
+        <tr>
+            <th scope="row">Atención al público</th>
+            <td>2</td>
+            <td>X: 15:45 a 17:45</td>
+            <td>Ana Ramírez</td>
+        </tr>
+    </table>
+
+    <h2> Combinaciones: colspan (horizontal) y rowspan (vertical)</h2>
+
+    <table border="1">
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Similique, quasi!</td>
+            <td>Ducimus, vero.</td>
+            <td colspan="3">Voluptatibus, labore.</td>
+<!--             <td>Minima, dolorum.</td>
+            <td>Ea, perferendis.</td> -->
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td colspan="2">Sequi, ullam?</td>
+            <!-- <td>Maiores, ratione.</td> -->
+            <td>Eum, nobis?</td>
+            <td>Maiores, a?</td>
+            <td>Aut, delectus.</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Lorem, ipsum.</td>
+            <td>Accusamus, id!</td>
+            <td>Ad, voluptatibus.</td>
+            <td colspan="2" rowspan="3">Distinctio, vero?</td>
+<!--             <td>Expedita, ratione.</td> -->
+            <td>Facilis, rerum.</td>
+        </tr>
+        <tr>
+       <!--      <td>Lorem, ipsum.</td> -->
+            <td>Aperiam, odit.</td>
+            <td>Recusandae, tempora!</td>
+            <td>Pariatur, nobis?</td>
+<!--             <td>Suscipit, quam.</td>
+            <td>Voluptatem, explicabo.</td> -->
+        </tr>
+        <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Sequi, commodi.</td>
+            <td>Ipsam, at.</td>
+            <td>Excepturi, tempora!</td>
+<!--             <td>Dolorum, maxime!</td>
+            <td>Magni, aut?</td> -->
+        </tr>
+
+    </table>
+
+    
+</body>
+</html>

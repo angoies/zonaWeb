@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo nuevos campos formularios</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Lorem, ipsum.</a></li>
+            <li><a href="">Iure, omnis!</a></li>
+            <li><a href="">Aperiam, consequuntur?</a></li>
+            <li><a href="">Placeat, molestias!</a></li>
+        </ul>
+    </nav>
+    <h1>Ejemplo nuevos campos formularios</h1>
+    <form action="procesa.php" method="get" novalidate>
+        <p>
+            <label for="noexiste">Tipo no existe</label> <br>
+            <input type="ango" name="noexiste" id="noexiste">            
+        </p>        
+
+        <p>
+            <label for="buscar">Buscar usuarios</label> <br>
+            <input type="search" name="buscar" id="buscar">            
+        </p>
+
+        <p>
+            <label> Origen: 
+                <input required name="from" type="text" list="city">
+            </label>
+            <datalist id="city">
+              <option value="Adelaide">Adelaide
+              <option>Beijing
+              <option>Bangkok
+              <option>Hanoi
+              <option>Hong Kong
+            </datalist>
+        </p>
+        <p>
+            <label for="colorpreferido">Color Preferido</label> <br>
+            <input value="#0000ff" type="color" name="colorpreferido" id="colorpreferido">
+        </p>          
+
+        <p>
+            <label for="fini">Fecha inicio</label> <br>
+            <input type="date" name="fini" id="fini" min="2023-11-05">
+        </p>  
+        <p>
+            <label for="hora">Hora inicio</label> <br>
+            <input type="time" name="hora" id="hora">
+        </p>          
+        <p>
+            <label for="correo">Correo Corporativo</label> <br>
+            <input type="email" name="correo" id="correo" placeholder="xxxxx@g.educaand.es">
+        </p>
+        <p>
+            <label for="web">URL personal</label> <br>
+            <input type="url" name="web" id="web">
+        </p>
+        <p>
+            <label for="telefono">Teléfono personal</label> <br>
+            <input type="tel" name="telefono" id="telefono" pattern="[0-9]{4}-[A-Z]">
+        </p>
+        <p>
+            <label for="personas">Número de personas</label> <br>
+            <input type="number" name="personas" id="personas" min="2" max="12" step="2">
+        </p>
+        <p>
+            <label for="precio">Precio</label> <br>
+            <input type="number" name="precio" id="precio" step="any">
+        </p>
+        <p>
+            <label for="volumen">volumen</label> <br>
+            <input type="range" name="volumen" id="volumen" value="0" min="0" max="12" step="4">
+        </p>        
+   
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </form>
+
+</body>
+
+</html>
