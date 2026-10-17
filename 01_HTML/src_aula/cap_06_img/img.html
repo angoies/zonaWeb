@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap 06 ejemplos</title>
     <style>
-        body {
-            background-color: yellow;
-        }
+        .destaca { background-color: yellow;  }
     </style>
 </head>
 <body>
 
     <h1>Ejemplos de uso de img en HTML</h1>
 
-    <p><img src="figuras/pensando.jpg" alt="Muñeco sentado sobre ratón pensando" width="225" height="225" ></p>
-    <p><img src="figuras/pensando.png" alt="Muñeco sentado sobre ratón pensando"   ></p>
+    <h2>Ejemplo de imagen con transparencia</h2>
+    <section class="destaca">
+        <img src="figuras/pensando.png" alt="Muñeco sobre ratón pensando" width="225" height="225" >
+        <img src="figuras/pensando.jpg" alt="Muñeco sobre ratón pensando" width="225" height="225" >
+    </section>
+
+    <h2>Ejemplo de imagen vectorial</h2>
     <p>
         <img src="figuras/tux.svg" alt="tux logo linux" width="249" height="304">
     </p>
 
+    <h2>Ejemplo de imagen con enlace</h2>
     <p>
-        <a href="http://facebook.com">x</a>     
-        </a>
+        <a href="http://facebook.com">
+            <img src="figuras/facebook.jpg" alt="logo facebook" width="50" height="50">
+        </a>     
     </p>
     
 </body>
