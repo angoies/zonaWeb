@@ -11,25 +11,17 @@
 	</style>
 </head>
 <body>
-
-  <header>
-    <h1>Formularios HTML con nuevos campos y atributos</h1>
-    <p>Este documento incluye ejemplos de nuevos elementos y atributos para formularios.</p>
-  </header>
-
-  <h2>Novedades</h2>
-  <ul>
-    <li> Nuevos tipos de input: <code>email, search, date, time, tel, url, color, number, range</code></li>
-    <li> Nuevos atributos o elementos: <code>placeholder, autofocus, required, novalidate, max, min, step, list, datalist</code></li>
-  </ul>
-
+  <!-- Modificado 01/10/2022. -->
+  <h1>Formularios HTML con nuevos campos y atributos</h1>
+  <p>Este documento incluye ejemplos de los nuevos elementos y atributos para formularios que añade HTML.</p>
 
   <h2>Formulario de ejemplo</h2>
-  <form action="" method="get"> <!-- probar uso atributo novalidate -->
+  <form action="" method="get">  
+    <!--  añadir atributo novalidate para desactivar compropbación inputs -->
 
   <div>
-    <p>El input de type <code>mail</code> comprueba que el valor que se introduce sigue la sintaxis de un e-mail. </p>
-    <pre> &lt;input <code>type="email"</code> name="correo" id="correo"  placeholder="Correo corporativo"> 	</pre>
+    <p>El input de type <code>email</code> comprueba que el valor que se introduce sigue la sintaxis de un e-mail. </p>
+    <pre> &lt;input <code>type="email"</code> name="correo" id="correo" autofocus="" placeholder="Correo corporativo"> 	</pre>
     <label for="correo"> Correo </label>
     <input type="email" name="correo" id="correo" autofocus="" placeholder="Correo corporativo">
   </div>
@@ -62,15 +54,6 @@
   </div>
 
 
-
-  <div>
-    <p>Input de tipo <code>range</code>: Similar a number pero proporcionando un control gráfico</p>
-    <pre> &lt;input <code>type="range"</code> name="range" id="range" min="0" max="100" step="10" value="50"></pre>
-    <label for="range"> Range (min 0, max 100, step 10) </label>
-    <input type="range" name="range" id="range" min="0" max="100" step="10" value="50">
-  </div>
-
-
   <div>
     <p>Input de tipo <code>date</code>: Comprueba si la fecha es correcta, y puede facilitar un calendario para seleccionar la fecha. Antes se hacía con jquery y similares. </p>
     <pre> &lt;input <code>type="date"</code> name="date" id="date"></pre>
@@ -86,51 +69,6 @@
     <input type="time" name="time" id="time" value="15:00" id="time">
   </div>
 
-
-  <div>
-    <p>Input de tipo <code>color</code>: Nos muestra un selector para elegir color. Se envía el código hexadecimal que le corresponde</p>
-    <pre> &lt;input <code>type="color"</code> name="color" id="color" value="#ffff00" id="color"></pre>
-    <label for="color">Color </label>
-    <input type="color" name="color" id="color" value="#ffff00">
-  </div>
-
-  <div>
-    <p>Atributo <code>pattern</code>: A los input se les puede añadir un atributo pattern que restringe los posibles valores de la entrada. En este ejemplo se fuerza a un formato de 9 dígitos, seguidos de una letra mayúscula entre A y Z. Estudiará patrones con más detenimiento en Sistemas o en el bloque XML de la asignatura.</p>
-    <pre> &lt;input type="text" name="pattern" id="pattern" <code>pattern="[0-9]{8}[A-Z]</code>" placeholder="[0-9]{8}[A-Z]" id="pattern"></pre>
-    <label for="pattern"> pattern(DNI) </label>
-    <input type="text" name="pattern" id="pattern" pattern="[0-9]{8}[A-Z]" placeholder="[0-9]{8}[A-Z]" id="pattern">
-  </div>
-
-  <div>
-    <p>Elemento <code>datalist</code> y atributo <code>list</code>. Sirven para presentar al usuario una lista de sugerencias, pero no limita, se puede enviar otro valor no incluido en dicha lista. El input y la datalist se relaciona con el atributo <code>list</code> en el input y el <code>id</code> en el datalist.
-    </p>
-    <pre>
-    &lt;label> Origen: &lt;input name="from" type="text" placeholder="Origen:" <code>list="city"</code>>&lt;/label>
-    &lt;datalist <code>id="city"</code>>
-      &lt;option value="Adelaide">Adelaide
-      &lt;option>Beijing
-      &lt;option>Bangkok
-      &lt;option>Hanoi
-      &lt;option>Hong Kong
-    &lt;/datalist>
-    </pre>
-    <label> Origen:<input name="from" type="text" placeholder="Origen:" list="city"></label>
-    <datalist id="city">
-      <option value="Adelaide">Adelaide
-      <option>Beijing
-      <option>Bangkok
-      <option>Hanoi
-      <option>Hong Kong
-    </datalist>
-  </div>
-
-  <div>
-    <p> Input de tipo <code>search</code>: similar al de texto. Algunos agentes de usuario cambian la forma de mostrarlo, o muestran entradas anteriores.</p>
-    <pre> &lt;input <code>type="search"</code> name="search" id="search" required=""></pre>
-    <label for="search">Search </label>
-    <input type="search" name="search" id="search" required="">
-  </div>
-
   <div>
     <input type="submit" value="Enviar">
     <input type="reset" value="Limpiar">
@@ -139,7 +77,7 @@
 </form>
   
   <div class="explica">
-    <h2> Comentarios adicionalesfile:///home/clases/GD/Clases_2022-23/DAW-LMSGI/unidades/HTML/t08_formularios/t08_formularios_ficheros</h2>
+    <h2> Comentarios adicionales</h2>
     <ul>
       <li>El atributo <code>placeholder</code>: pequeña ayuda o descripción sobre el valor esperado en dicha entrada del formulario. No confundir con el valor por defecto, que se especifica con <code>value</code>.</li>
       <li>El atributo <code>autofocus</code> es un atributo del tipo lógico. Su existencia en un input indica que dicha entrada deberá obtener el foco cuando la página se muestra.</li>
@@ -153,7 +91,6 @@
     <ul>
       <li><a href="http://www.anerbarrena.com/nuevos-input-html5-3739/">Los nuevos atributos HTML5 para inputs y formularios</a>, por Aner Barrena</li>
       <li><a href="https://www.w3.org/community/webed/wiki/Es/Elementos_de_formulario_adicionales_del_HTML5">Elementos de formulario adicionales del HTML5</a>, por el W3C.</li>
-      <li>Opcional: <a href="https://www.adictosaltrabajo.com/tutoriales/regexsam/">expresiones regulares</a></li>
     </ul>
   </div>
 

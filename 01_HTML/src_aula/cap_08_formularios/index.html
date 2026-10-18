@@ -11,23 +11,25 @@
 <body>
 
   <h1>Formulario básico</h1>
-  <p>Ejemplo de formulario para comprobar funcionamiento de <code>procesa.php</code>. Pruebe a modificar action a los valores post/get y observe la URL. Recuerde que necesita servidor web con PHP.</p>
-  <p>Y si quiere puede probar con un formulario más completo: <a href="formulario-html5.html">Formulario con nuevos campos HTML</a></p>
-
-  <p> Es necesario que ejecutar en un entorno con servidor con PHP activo. </p>
-   
-  <form action="procesa.php" method="get">
-
+  <ul>
+    <li>Pruebe a modificar action a los valores <code>post</code> o <code>get</code> y observe la URL</li>
+    <li>Añada en <code>action</code> URLs de servidores propuestos para procesar la petición.</li>
+    <li>Puede probar con un formulario más completo: <a href="formulario-html5.html">Formulario con nuevos campos HTML</a></p>
+  </u>
+  
+  
+  <form action="" method="get">  <!-- metodos get o post -->
+  <!-- puede usar en action las URLs propuestas en clase -->
     <p>
-      <label>Usuario <input type="text" name="usuario"></label>
+      <label>Usuario <br>
+        <input type="text" name="usuario">
+      </label>
     </p>
     <p>
-      <label>Clave <input type="password" name="clave"></label>
+      <label>Clave <br>
+        <input type="password" name="clave">
+      </label>
     </p>    
-    <p>
-      <label>Fecha <input type="date" name="fecha"></label>
-    </p>
-
     <p>
       <input type="submit" value="Enviar">
       <input type="reset" value="Borrar">
