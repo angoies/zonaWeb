@@ -501,6 +501,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cap. 07
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -511,6 +523,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Repaso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ejemplo práctico
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1167,6 +1216,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-repaso" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Repaso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ejemplo práctico
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1182,6 +1257,7 @@
 
 
 <h1 id="cap-07-amplia-tablas">Cap 07: Amplia tablas<a class="headerlink" href="#cap-07-amplia-tablas" title="Permanent link">&para;</a></h1>
+<h2 id="1-repaso">1. Repaso<a class="headerlink" href="#1-repaso" title="Permanent link">&para;</a></h2>
 <p>Lo principal de este capítulo es separar semántica de presentación. </p>
 <p>Para ello hay que distinguir en una tabla (sin prestar atención a la presentación: negrita, celdas centradas, etc.):</p>
 <ul>
@@ -1190,12 +1266,34 @@
 <li>Identificar las celdas que son cabeceras de filas <code>&lt;th scope="row&gt;</code></li>
 <li>Y el resto deben ser celdas de datos <code>&lt;td&gt;</code></li>
 </ul>
-<p>Tenga en cuenta que:</p>
+<h2 id="2-ejemplo-practico">2. Ejemplo práctico<a class="headerlink" href="#2-ejemplo-practico" title="Permanent link">&para;</a></h2>
+<p>Tiene esta tabla</p>
+<p><img alt="/tabla-examen-html.png" src="../tabla-examen-html.png" /></p>
+<p>En ella deberá observar, sin dejarse "confundir" por la presentación:</p>
+<ol>
+<li>El texto "Resultados Módulo" es el <code>caption</code> de la tabla, le da título.</li>
+<li>En la primera fila las celdas Examen, Aprobados, etc. son cabeceras de columna, luego se deben etiquetar como <code>&lt;th scope="col"&gt;Examen&lt;/th&gt;</code>, etc.</li>
+<li>En la primera columna las celdas "1ª Ev", "2ª Ev", etc. son cabeceras pero en este caso de fila: <code>&lt;th scope="row"&gt;1ª Ev&lt;/th&gt;</code>, etc.</li>
+<li>El resto de celdas son deldas de datos, <code>&lt;td&gt; &lt;/td&gt;</code>.</li>
+<li>
+<p>Las combinaciones de celdas se hacen usando los atributos:</p>
 <ul>
-<li>aunque los más frecuente es que las cabeceras de columna estén en la primera fíla, también podrían estar en la última, o en un fila intermedia si la tabla es extensa. </li>
-<li>algo similar ocurre con las cabeceras de fila. </li>
-<li>y que una celda aparezca en negrita o centrada no significa que sea cabecera, puede ser datos qeu se hayan resaltado por su importancia.</li>
+<li><code>colspan="nceldas"</code> agrupa hacia la derecha tantas celdas como indica <code>nceldas</code>.</li>
+<li><code>rowspan="nceldas"</code> agrupa hacia abajo tantas celdas como indica <code>nceldas</code>.</li>
 </ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">No se deje llevar por la presentación</p>
+<p>En otros ejemplos es posible que:</p>
+<ul>
+<li>haya alguna celda de datos en negrita y centrada: no es una cabecera.</li>
+<li>el caption aparezca debajo de la tabla.</li>
+<li>las cabeceras de columna estén al final de la tabla.</li>
+<li>o las cabeceras de fila a la derecha.</li>
+<li>etc.</li>
+</ul>
+</div>
 
 
 
